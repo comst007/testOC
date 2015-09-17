@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB2A03C51BAAC91600F26F97 /* LZGameCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2A03C41BAAC91600F26F97 /* LZGameCenter.m */; };
 		CB9EEBC81BA86D5600BB47C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9EEBC71BA86D5600BB47C0 /* main.m */; };
 		CB9EEBD01BA86E1000BB47C0 /* LZAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9EEBCF1BA86E1000BB47C0 /* LZAnimal.m */; };
 		CB9EEBD31BA874C500BB47C0 /* LZBird.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9EEBD21BA874C500BB47C0 /* LZBird.m */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CB2A03C31BAAC91600F26F97 /* LZGameCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZGameCenter.h; sourceTree = "<group>"; };
+		CB2A03C41BAAC91600F26F97 /* LZGameCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZGameCenter.m; sourceTree = "<group>"; };
 		CB9EEBC41BA86D5600BB47C0 /* Homework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Homework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9EEBC71BA86D5600BB47C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CB9EEBCE1BA86E1000BB47C0 /* LZAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAnimal.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				CB9EEBC71BA86D5600BB47C0 /* main.m */,
+				CB2A03C31BAAC91600F26F97 /* LZGameCenter.h */,
+				CB2A03C41BAAC91600F26F97 /* LZGameCenter.m */,
 				CB9EEBCE1BA86E1000BB47C0 /* LZAnimal.h */,
 				CB9EEBCF1BA86E1000BB47C0 /* LZAnimal.m */,
 				CB9EEBD41BA87C1B00BB47C0 /* LZFish.h */,
@@ -135,6 +140,7 @@
 			files = (
 				CB9EEBC81BA86D5600BB47C0 /* main.m in Sources */,
 				CB9EEBD31BA874C500BB47C0 /* LZBird.m in Sources */,
+				CB2A03C51BAAC91600F26F97 /* LZGameCenter.m in Sources */,
 				CB9EEBD01BA86E1000BB47C0 /* LZAnimal.m in Sources */,
 				CB9EEBD61BA87C1B00BB47C0 /* LZFish.m in Sources */,
 			);
@@ -253,6 +259,7 @@
 				CB9EEBCD1BA86D5600BB47C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

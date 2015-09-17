@@ -10,12 +10,12 @@
 #import "LZAnimal.h"
 #import "LZBird.h"
 #import "LZFish.h"
-
+#import "LZGameCenter.h"
 const static NSInteger count = 10 ;
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        
+        /*
         LZAnimal *animal1 = [[LZAnimal alloc] initWithName:@"kaka" andWeight:10.0 andGender:LZAnimalGenderMale];
         [animal1 speak];
         
@@ -60,7 +60,7 @@ int main(int argc, const char * argv[]) {
             [arrayOFBirdsAndFishes addObject:newFish];
             
         }
-        
+        */
         //1
         /*
         [arrayOFBirdsAndFishes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -73,9 +73,25 @@ int main(int argc, const char * argv[]) {
         //[arrayOFBirdsAndFishes makeObjectsPerformSelector:@selector(act) withObject:nil];
         
         //3
+        /*
         for (LZAnimal *animal in arrayOFBirdsAndFishes) {
             [animal act];
+        }*/
+        
+        LZGameCenter *game = [[LZGameCenter alloc] init];
+        while (true) {
+            NSUInteger catchCount = [game catchFish];
+            
+            if (catchCount == 0) {
+                NSLog(@"No fishes!---------------");
+                break;
+            }
+            NSLog(@"catching %ld fishes!", catchCount);
+            
+            sleep(3);
         }
+        
+        
         
     }
     return 0;

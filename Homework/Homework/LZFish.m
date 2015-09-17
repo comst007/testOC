@@ -35,4 +35,8 @@
 - (NSString *)description{
     return [NSString stringWithFormat:@"fish - name: %@, weight: %.2f, gender: %@, color: %@", self.name, self.weight, self.gender ? @"female":@"male", self.color];
 }
+
+-(void)dealloc{
+    NSLog(@"%s-----%@", __func__, self);
+}
 @end
