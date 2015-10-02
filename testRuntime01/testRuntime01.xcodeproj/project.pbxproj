@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB4C60821BBDE19100F65CD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4C60811BBDE19100F65CD0 /* main.m */; };
+		CB4C608A1BBDE1D300F65CD0 /* LZPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4C60891BBDE1D300F65CD0 /* LZPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		CB4C607E1BBDE19100F65CD0 /* testRuntime01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testRuntime01; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4C60811BBDE19100F65CD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB4C60881BBDE1D300F65CD0 /* LZPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPerson.h; sourceTree = "<group>"; };
+		CB4C60891BBDE1D300F65CD0 /* LZPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				CB4C60811BBDE19100F65CD0 /* main.m */,
+				CB4C60881BBDE1D300F65CD0 /* LZPerson.h */,
+				CB4C60891BBDE1D300F65CD0 /* LZPerson.m */,
 			);
 			path = testRuntime01;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB4C608A1BBDE1D300F65CD0 /* LZPerson.m in Sources */,
 				CB4C60821BBDE19100F65CD0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +211,7 @@
 		CB4C60861BBDE19100F65CD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +219,7 @@
 		CB4C60871BBDE19100F65CD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
