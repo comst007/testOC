@@ -9,44 +9,61 @@
 #import <Foundation/Foundation.h>
 #import "LZPerson.h"
 #import <objc/message.h>
-NSString *greeting(id self, SEL _cmd){
-    return [NSString stringWithFormat:@"Hello World!"];
+#import <objc/runtime.h>
+@interface LZDog: NSObject{
+    NSInteger _age;
 }
+
+@end
+
+@implementation LZDog
+
+- (instancetype)initWithAge:(NSInteger) age{
+    
+    self = [super init];
+    if (self) {
+        _age = age;
+    }
+    return self;
+}
+
+@end
+    
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Class  dyClass = objc_allocateClassPair([NSObject class], "DynamicClass", 0);
+        LZDog *dog1 = [[LZDog alloc] initWithAge:0x123456780a0b0c0d];
         
-        Method desMethod = class_getInstanceMethod([NSObject class], @selector(description));
+        LZDog *dog2 = [[LZDog alloc] initWithAge:0xaabbccdd12345678];
+        //get the objec size
+        NSInteger objcSize = class_getInstanceSize([LZDog class]);
         
-        const char *types = method_getTypeEncoding(desMethod);
+        //打印对象的内存数据
+        NSData *dog1Data = [NSData dataWithBytes:(__bridge void*)dog1 length:objcSize];
         
-        class_addMethod(dyClass, @selector(greeting), (IMP)greeting, types);
+        NSData *dog2Data = [NSData dataWithBytes:(__bridge void*)dog2 length:objcSize];
         
-        objc_registerClassPair(dyClass);
+        //查看对象内存
+        NSLog(@"dog1: %@", dog1Data);
+        NSLog(@"dog2: %@", dog2Data);
+        //打印类地址
+        NSLog(@"class address:%p", [LZDog class]);
         
-        id obj = [[dyClass alloc] init ];
+        //查看类内存
+        id dogClass = objc_getClass("LZDog");
+        NSInteger classSize = class_getInstanceSize([dogClass class]);
         
-        //[obj performSelector:NSSelectorFromString(@"greeting")];
-        //objc_msgSend(obj, NSSelectorFromString(@"greeting"));
+        NSData *classData = [NSData dataWithBytes:(__bridge void*)dogClass length:classSize];
         
-        //NSLog(@"-----%@", objc_msgSend(obj, NSSelectorFromString(@"greeting")));
-        NSLog(@"%@", [obj performSelector:NSSelectorFromString(@"greeting")]);
+        NSLog(@"dogclass: %@", classData);
+        
+        //打印父类（NSobject）地址
+        NSLog(@"superclass address: %p", [LZDog superclass]);
+        
+        
         
     }
    
     return 0;
-}
-
-void testDynamicMethod(){
-    
-    
-#pragma  clang diagnostic push
-#pragma  clang diagnostic ignored "-Warc-performSelector-leaks"
-    LZPerson *p = [[LZPerson alloc] init];
-    
-    SEL sel = NSSelectorFromString(@"show");
-    [p performSelector:sel];
-#pragma clang diagnostic pop
-    
 }
