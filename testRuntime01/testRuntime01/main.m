@@ -10,60 +10,120 @@
 #import "LZPerson.h"
 #import <objc/message.h>
 #import <objc/runtime.h>
-@interface LZDog: NSObject{
-    NSInteger _age;
+
+static void dynamicResolveMethodIMP(id self, SEL _cmd){
+    NSLog(@"dynamicResolveMethodIMP");
+}
+@interface LZMouse : NSObject
+
+- (void)fastforwardMessage;
+- (void)forwardMessage;
+@end
+
+@implementation LZMouse
+
+- (void)fastforwardMessage{
+    NSLog(@"LZMouse %s", __func__);
+}
+
+- (void)forwardMessage{
+    NSLog(@"LZMouse %s", __func__);
 }
 
 @end
 
-@implementation LZDog
+@interface LZCat : NSObject
 
-- (instancetype)initWithAge:(NSInteger) age{
+@property (nonatomic, strong) LZMouse *mouse;
+
+- (void)normalMessage;
+
+
+@end
+
+@implementation LZCat
+
+- (void)normalMessage{
+     NSLog(@"%s", __func__);
+}
+
++ (BOOL)resolveInstanceMethod:(SEL)sel{
     
-    self = [super init];
-    if (self) {
-        _age = age;
+    NSString *selector = NSStringFromSelector(sel);
+    
+    if ([selector isEqualToString:@"dynamicResolveMessage"]) {
+        BOOL isOk ;
+        
+        isOk = class_addMethod([LZCat class], sel, (IMP)dynamicResolveMethodIMP, "v@:");
+        if (!isOk) {
+            NSLog(@"addmethod fail");
+            return [super resolveInstanceMethod:sel];
+        }
+        return YES;
     }
-    return self;
+    
+    return [super resolveInstanceMethod:sel];
 }
 
-@end
+- (id)forwardingTargetForSelector:(SEL)aSelector{
+    
+    NSString *selector = NSStringFromSelector(aSelector);
+    
+    if ([selector isEqualToString:@"fastforwardMessage"]) {
+        return self.mouse;
+    }
+    
+    return [super forwardingTargetForSelector:aSelector];
+}
+
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation{
+    NSString *selector = NSStringFromSelector(anInvocation.selector);
+    
+    if ([selector isEqualToString:@"forwardMessage"]) {
+        [anInvocation invokeWithTarget:self.mouse];
+        return;
+    }
+    [super forwardInvocation:anInvocation];
+}
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector{
     
 
+    return [NSMethodSignature signatureWithObjCTypes:"v@:"];
+
+}
+@end
+
+@interface LZCat (LZCat_cat)
+
+- (void)dynamicResolveMessage;
+
+- (void)fastforwardMessage;
+
+- (void)forwardMessage;
+@end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        LZDog *dog1 = [[LZDog alloc] initWithAge:0x123456780a0b0c0d];
+      
+        LZCat *acat = [[LZCat alloc] init];
         
-        LZDog *dog2 = [[LZDog alloc] initWithAge:0xaabbccdd12345678];
-        //get the objec size
-        NSInteger objcSize = class_getInstanceSize([LZDog class]);
+        acat.mouse = [[LZMouse alloc] init];
+        //正常的消息发送，在类的虚函数表了可以搜索得到
+        [acat normalMessage];
         
-        //打印对象的内存数据
-        NSData *dog1Data = [NSData dataWithBytes:(__bridge void*)dog1 length:objcSize];
-        
-        NSData *dog2Data = [NSData dataWithBytes:(__bridge void*)dog2 length:objcSize];
-        
-        //查看对象内存
-        NSLog(@"dog1: %@", dog1Data);
-        NSLog(@"dog2: %@", dog2Data);
-        //打印类地址
-        NSLog(@"class address:%p", [LZDog class]);
-        
-        //查看类内存
-        id dogClass = objc_getClass("LZDog");
-        NSInteger classSize = class_getInstanceSize([dogClass class]);
-        
-        NSData *classData = [NSData dataWithBytes:(__bridge void*)dogClass length:classSize];
-        
-        NSLog(@"dogclass: %@", classData);
-        
-        //打印父类（NSobject）地址
-        NSLog(@"superclass address: %p", [LZDog superclass]);
+        //动态方法决议
+        [acat dynamicResolveMessage];
         
         
+        //  快速消息转发
+        [acat fastforwardMessage];
         
+        
+        //正常消息转发,修改target
+        [acat forwardMessage];
     }
-   
+    
     return 0;
 }

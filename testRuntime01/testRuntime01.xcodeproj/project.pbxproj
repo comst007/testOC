@@ -10,6 +10,8 @@
 		CB4C60821BBDE19100F65CD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4C60811BBDE19100F65CD0 /* main.m */; };
 		CB4C608A1BBDE1D300F65CD0 /* LZPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4C60891BBDE1D300F65CD0 /* LZPerson.m */; };
 		CBF316FC1BC0CD7100CDAAD0 /* example.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF316FB1BC0CD7100CDAAD0 /* example.m */; };
+		CBF316FE1BC0DA6300CDAAD0 /* class_object_structure.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF316FD1BC0DA6300CDAAD0 /* class_object_structure.m */; };
+		CBF317001BC1234A00CDAAD0 /* dynamic_creat_class.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF316FF1BC1234A00CDAAD0 /* dynamic_creat_class.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +32,8 @@
 		CB4C60881BBDE1D300F65CD0 /* LZPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPerson.h; sourceTree = "<group>"; };
 		CB4C60891BBDE1D300F65CD0 /* LZPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPerson.m; sourceTree = "<group>"; };
 		CBF316FB1BC0CD7100CDAAD0 /* example.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = example.m; sourceTree = "<group>"; };
+		CBF316FD1BC0DA6300CDAAD0 /* class_object_structure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = class_object_structure.m; sourceTree = "<group>"; };
+		CBF316FF1BC1234A00CDAAD0 /* dynamic_creat_class.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dynamic_creat_class.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				CB4C60881BBDE1D300F65CD0 /* LZPerson.h */,
 				CB4C60891BBDE1D300F65CD0 /* LZPerson.m */,
 				CBF316FB1BC0CD7100CDAAD0 /* example.m */,
+				CBF316FD1BC0DA6300CDAAD0 /* class_object_structure.m */,
+				CBF316FF1BC1234A00CDAAD0 /* dynamic_creat_class.m */,
 			);
 			path = testRuntime01;
 			sourceTree = "<group>";
@@ -129,6 +135,8 @@
 				CB4C608A1BBDE1D300F65CD0 /* LZPerson.m in Sources */,
 				CBF316FC1BC0CD7100CDAAD0 /* example.m in Sources */,
 				CB4C60821BBDE19100F65CD0 /* main.m in Sources */,
+				CBF317001BC1234A00CDAAD0 /* dynamic_creat_class.m in Sources */,
+				CBF316FE1BC0DA6300CDAAD0 /* class_object_structure.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
