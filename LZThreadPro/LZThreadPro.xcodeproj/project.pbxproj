@@ -14,6 +14,13 @@
 		CB2393DF1BC39A3300B470BA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2393DE1BC39A3300B470BA /* Images.xcassets */; };
 		CB2393E21BC39A3300B470BA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB2393E01BC39A3300B470BA /* LaunchScreen.xib */; };
 		CB2393EE1BC39A3300B470BA /* LZThreadProTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2393ED1BC39A3300B470BA /* LZThreadProTests.m */; };
+		CB2394001BC39A8700B470BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2393FF1BC39A8700B470BA /* main.m */; };
+		CB2394031BC39A8700B470BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2394021BC39A8700B470BA /* AppDelegate.m */; };
+		CB2394061BC39A8700B470BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2394051BC39A8700B470BA /* ViewController.m */; };
+		CB2394091BC39A8700B470BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2394071BC39A8700B470BA /* Main.storyboard */; };
+		CB23940B1BC39A8700B470BA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB23940A1BC39A8700B470BA /* Images.xcassets */; };
+		CB23940E1BC39A8700B470BA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB23940C1BC39A8700B470BA /* LaunchScreen.xib */; };
+		CB23941A1BC39A8700B470BA /* LZthread02Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2394191BC39A8700B470BA /* LZthread02Tests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +30,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = CB2393CD1BC39A3300B470BA;
 			remoteInfo = LZThreadPro;
+		};
+		CB2394141BC39A8700B470BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB2393C61BC39A3300B470BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB2393FA1BC39A8700B470BA;
+			remoteInfo = LZthread02;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,6 +54,19 @@
 		CB2393E71BC39A3300B470BA /* LZThreadProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZThreadProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2393EC1BC39A3300B470BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB2393ED1BC39A3300B470BA /* LZThreadProTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZThreadProTests.m; sourceTree = "<group>"; };
+		CB2393FB1BC39A8700B470BA /* LZthread02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZthread02.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB2393FE1BC39A8700B470BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB2393FF1BC39A8700B470BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB2394011BC39A8700B470BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CB2394021BC39A8700B470BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CB2394041BC39A8700B470BA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CB2394051BC39A8700B470BA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CB2394081BC39A8700B470BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB23940A1BC39A8700B470BA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB23940D1BC39A8700B470BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CB2394131BC39A8700B470BA /* LZthread02Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZthread02Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB2394181BC39A8700B470BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB2394191BC39A8700B470BA /* LZthread02Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZthread02Tests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +84,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB2393F81BC39A8700B470BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB2394101BC39A8700B470BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,6 +106,8 @@
 			children = (
 				CB2393D01BC39A3300B470BA /* LZThreadPro */,
 				CB2393EA1BC39A3300B470BA /* LZThreadProTests */,
+				CB2393FC1BC39A8700B470BA /* LZthread02 */,
+				CB2394161BC39A8700B470BA /* LZthread02Tests */,
 				CB2393CF1BC39A3300B470BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +117,8 @@
 			children = (
 				CB2393CE1BC39A3300B470BA /* LZThreadPro.app */,
 				CB2393E71BC39A3300B470BA /* LZThreadProTests.xctest */,
+				CB2393FB1BC39A8700B470BA /* LZthread02.app */,
+				CB2394131BC39A8700B470BA /* LZthread02Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +164,47 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CB2393FC1BC39A8700B470BA /* LZthread02 */ = {
+			isa = PBXGroup;
+			children = (
+				CB2394011BC39A8700B470BA /* AppDelegate.h */,
+				CB2394021BC39A8700B470BA /* AppDelegate.m */,
+				CB2394041BC39A8700B470BA /* ViewController.h */,
+				CB2394051BC39A8700B470BA /* ViewController.m */,
+				CB2394071BC39A8700B470BA /* Main.storyboard */,
+				CB23940A1BC39A8700B470BA /* Images.xcassets */,
+				CB23940C1BC39A8700B470BA /* LaunchScreen.xib */,
+				CB2393FD1BC39A8700B470BA /* Supporting Files */,
+			);
+			path = LZthread02;
+			sourceTree = "<group>";
+		};
+		CB2393FD1BC39A8700B470BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB2393FE1BC39A8700B470BA /* Info.plist */,
+				CB2393FF1BC39A8700B470BA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB2394161BC39A8700B470BA /* LZthread02Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CB2394191BC39A8700B470BA /* LZthread02Tests.m */,
+				CB2394171BC39A8700B470BA /* Supporting Files */,
+			);
+			path = LZthread02Tests;
+			sourceTree = "<group>";
+		};
+		CB2394171BC39A8700B470BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB2394181BC39A8700B470BA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +243,41 @@
 			productReference = CB2393E71BC39A3300B470BA /* LZThreadProTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CB2393FA1BC39A8700B470BA /* LZthread02 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB23941B1BC39A8700B470BA /* Build configuration list for PBXNativeTarget "LZthread02" */;
+			buildPhases = (
+				CB2393F71BC39A8700B470BA /* Sources */,
+				CB2393F81BC39A8700B470BA /* Frameworks */,
+				CB2393F91BC39A8700B470BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LZthread02;
+			productName = LZthread02;
+			productReference = CB2393FB1BC39A8700B470BA /* LZthread02.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB2394121BC39A8700B470BA /* LZthread02Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB23941E1BC39A8700B470BA /* Build configuration list for PBXNativeTarget "LZthread02Tests" */;
+			buildPhases = (
+				CB23940F1BC39A8700B470BA /* Sources */,
+				CB2394101BC39A8700B470BA /* Frameworks */,
+				CB2394111BC39A8700B470BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB2394151BC39A8700B470BA /* PBXTargetDependency */,
+			);
+			name = LZthread02Tests;
+			productName = LZthread02Tests;
+			productReference = CB2394131BC39A8700B470BA /* LZthread02Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,6 +293,13 @@
 					CB2393E61BC39A3300B470BA = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = CB2393CD1BC39A3300B470BA;
+					};
+					CB2393FA1BC39A8700B470BA = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					CB2394121BC39A8700B470BA = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = CB2393FA1BC39A8700B470BA;
 					};
 				};
 			};
@@ -190,6 +318,8 @@
 			targets = (
 				CB2393CD1BC39A3300B470BA /* LZThreadPro */,
 				CB2393E61BC39A3300B470BA /* LZThreadProTests */,
+				CB2393FA1BC39A8700B470BA /* LZthread02 */,
+				CB2394121BC39A8700B470BA /* LZthread02Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -206,6 +336,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CB2393E51BC39A3300B470BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB2393F91BC39A8700B470BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB2394091BC39A8700B470BA /* Main.storyboard in Resources */,
+				CB23940E1BC39A8700B470BA /* LaunchScreen.xib in Resources */,
+				CB23940B1BC39A8700B470BA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB2394111BC39A8700B470BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -233,6 +380,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB2393F71BC39A8700B470BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB2394061BC39A8700B470BA /* ViewController.m in Sources */,
+				CB2394031BC39A8700B470BA /* AppDelegate.m in Sources */,
+				CB2394001BC39A8700B470BA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB23940F1BC39A8700B470BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB23941A1BC39A8700B470BA /* LZthread02Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -240,6 +405,11 @@
 			isa = PBXTargetDependency;
 			target = CB2393CD1BC39A3300B470BA /* LZThreadPro */;
 			targetProxy = CB2393E81BC39A3300B470BA /* PBXContainerItemProxy */;
+		};
+		CB2394151BC39A8700B470BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB2393FA1BC39A8700B470BA /* LZthread02 */;
+			targetProxy = CB2394141BC39A8700B470BA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -256,6 +426,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				CB2393E11BC39A3300B470BA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		CB2394071BC39A8700B470BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB2394081BC39A8700B470BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB23940C1BC39A8700B470BA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB23940D1BC39A8700B470BA /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -397,6 +583,64 @@
 			};
 			name = Release;
 		};
+		CB23941C1BC39A8700B470BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LZthread02/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CB23941D1BC39A8700B470BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LZthread02/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CB23941F1BC39A8700B470BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LZthread02Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZthread02.app/LZthread02";
+			};
+			name = Debug;
+		};
+		CB2394201BC39A8700B470BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LZthread02Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZthread02.app/LZthread02";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -422,6 +666,22 @@
 			buildConfigurations = (
 				CB2393F51BC39A3300B470BA /* Debug */,
 				CB2393F61BC39A3300B470BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CB23941B1BC39A8700B470BA /* Build configuration list for PBXNativeTarget "LZthread02" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB23941C1BC39A8700B470BA /* Debug */,
+				CB23941D1BC39A8700B470BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CB23941E1BC39A8700B470BA /* Build configuration list for PBXNativeTarget "LZthread02Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB23941F1BC39A8700B470BA /* Debug */,
+				CB2394201BC39A8700B470BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
