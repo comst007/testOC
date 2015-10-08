@@ -20,8 +20,9 @@
     NSLog(@"viewDidLoad: %@", [NSThread currentThread] );
     //[self performSelectorInBackground:@selector(loadImage) withObject:nil];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    /*
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^{
-        
+    
         NSLog(@"loadImage: %@", [NSThread currentThread] );
         NSURL *imageURL = [NSURL URLWithString:@"http://120.24.236.135/imagesdir/syln.jpg"];
         NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
@@ -37,6 +38,24 @@
         
         
     });
+     */
+    NSOperationQueue *opQueue = [[NSOperationQueue alloc] init];
+    [opQueue addOperationWithBlock:^{
+        
+        NSLog(@"loadImage: %@", [NSThread currentThread] );
+        NSURL *imageURL = [NSURL URLWithString:@"http://120.24.236.135/imagesdir/syln.jpg"];
+        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+        
+        [NSThread sleepForTimeInterval:5];
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+            UIImage *image = [UIImage imageWithData:imageData];
+            self.imageView.image = image;
+            
+        }];
+        
+    }];
     NSLog(@"viewDidLoad end---------");
     
 }
