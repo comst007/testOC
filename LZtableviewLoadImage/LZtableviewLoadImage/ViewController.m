@@ -32,11 +32,9 @@
    
     cell.detailTextLabel.attributedText = [self LZColoredString:appItem.download];
     
-    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:appItem.icon]];
+
     
-    UIImage *iconImage = [UIImage imageWithData:imageData];
-    
-    cell.imageView.image = iconImage;
+   
     
     return cell;
 }
