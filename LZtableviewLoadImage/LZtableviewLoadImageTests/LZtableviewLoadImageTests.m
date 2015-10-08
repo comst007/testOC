@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-
+#import "LZAppInfo.h"
 @interface LZtableviewLoadImageTests : XCTestCase
 
 @end
@@ -27,7 +27,8 @@
 
 - (void)testExample {
     // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+    NSInteger count = [[LZAppInfo arrayOfAppInfo] count];
+    XCTAssert(count, @"Pass");
 }
 
 - (void)testPerformanceExample {

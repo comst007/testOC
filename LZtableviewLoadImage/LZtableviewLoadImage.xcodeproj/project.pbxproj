@@ -14,6 +14,8 @@
 		CB8DC2021BC61FD800A534F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8DC2011BC61FD800A534F5 /* Images.xcassets */; };
 		CB8DC2051BC61FD800A534F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8DC2031BC61FD800A534F5 /* LaunchScreen.xib */; };
 		CB8DC2111BC61FD800A534F5 /* LZtableviewLoadImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8DC2101BC61FD800A534F5 /* LZtableviewLoadImageTests.m */; };
+		CB8DC21B1BC6203200A534F5 /* apps.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB8DC21A1BC6203200A534F5 /* apps.plist */; };
+		CB8DC21F1BC621E900A534F5 /* LZAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8DC21E1BC621E900A534F5 /* LZAppInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		CB8DC20A1BC61FD800A534F5 /* LZtableviewLoadImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZtableviewLoadImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8DC20F1BC61FD800A534F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB8DC2101BC61FD800A534F5 /* LZtableviewLoadImageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZtableviewLoadImageTests.m; sourceTree = "<group>"; };
+		CB8DC21A1BC6203200A534F5 /* apps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = apps.plist; sourceTree = "<group>"; };
+		CB8DC21D1BC621E900A534F5 /* LZAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAppInfo.h; sourceTree = "<group>"; };
+		CB8DC21E1BC621E900A534F5 /* LZAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAppInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,8 @@
 		CB8DC1F31BC61FD800A534F5 /* LZtableviewLoadImage */ = {
 			isa = PBXGroup;
 			children = (
+				CB8DC21A1BC6203200A534F5 /* apps.plist */,
+				CB8DC21C1BC621BB00A534F5 /* Model */,
 				CB8DC1F81BC61FD800A534F5 /* AppDelegate.h */,
 				CB8DC1F91BC61FD800A534F5 /* AppDelegate.m */,
 				CB8DC1FB1BC61FD800A534F5 /* ViewController.h */,
@@ -117,6 +124,15 @@
 				CB8DC20F1BC61FD800A534F5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB8DC21C1BC621BB00A534F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB8DC21D1BC621E900A534F5 /* LZAppInfo.h */,
+				CB8DC21E1BC621E900A534F5 /* LZAppInfo.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8DC21B1BC6203200A534F5 /* apps.plist in Resources */,
 				CB8DC2001BC61FD800A534F5 /* Main.storyboard in Resources */,
 				CB8DC2051BC61FD800A534F5 /* LaunchScreen.xib in Resources */,
 				CB8DC2021BC61FD800A534F5 /* Images.xcassets in Resources */,
@@ -220,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB8DC1FD1BC61FD800A534F5 /* ViewController.m in Sources */,
+				CB8DC21F1BC621E900A534F5 /* LZAppInfo.m in Sources */,
 				CB8DC1FA1BC61FD800A534F5 /* AppDelegate.m in Sources */,
 				CB8DC1F71BC61FD800A534F5 /* main.m in Sources */,
 			);
