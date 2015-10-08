@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import "LZAppInfo.h"
 @interface ViewController ()
-
+@property (nonatomic, strong) NSOperationQueue *operationQueue;
+@property (nonatomic, strong) NSCache *imageCache;
+@property (nonatomic, strong) NSMutableDictionary *operationDicM;
 @end
 
 @implementation ViewController
@@ -31,7 +33,60 @@
     cell.textLabel.text = appItem.name;
    
     cell.detailTextLabel.attributedText = [self LZColoredString:appItem.download];
+    id imageData = [self.imageCache objectForKey:appItem.icon];
     
+    if (imageData) {
+        NSLog(@"memery");
+        UIImage *iconImage = [UIImage imageWithData:imageData];
+        cell.imageView.image = iconImage;
+    }else{
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+        NSString *iconName = [appItem.icon lastPathComponent];
+        
+        NSString *iconPath = [NSString stringWithFormat:@"%@/%@", path, iconName];
+        
+        BOOL ifExist = [[NSFileManager defaultManager] fileExistsAtPath:iconPath];
+        
+        if (ifExist) {
+            NSLog(@"sandbox");
+            NSData *imageData = [NSData dataWithContentsOfFile:iconPath];
+            UIImage *iconImage = [UIImage imageWithData:imageData];
+            cell.imageView.image = iconImage;
+            [self.imageCache setObject:imageData forKey:appItem.icon];
+            
+        }else{
+            cell.imageView.image = [UIImage imageNamed:@"user_default"];
+            if (self.operationDicM[appItem.icon] == nil) {
+                NSLog(@"network");
+                __weak typeof(self) weakSelf = self;
+                NSBlockOperation *iconOperation = [NSBlockOperation blockOperationWithBlock:^{
+                    
+                    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:appItem.icon]];
+                    if (imageData) {
+                        
+                        [imageData writeToFile:iconPath atomically:YES];
+                        [weakSelf.imageCache setObject:imageData forKey:appItem.icon];
+                        
+                    }
+                    
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        
+                        
+                        
+                        [weakSelf.operationDicM removeObjectForKey:appItem.icon];
+                        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+                        
+                    }];
+                    
+                }];
+                [self.operationQueue addOperation:iconOperation];
+                self.operationDicM[appItem.icon] = iconOperation;
+            }else{
+                
+                NSLog(@"operation exist");
+            }
+        }
+    }
 
     
    
@@ -48,4 +103,30 @@
     return attrString;
 }
 
+
+- (NSOperationQueue *)operationQueue{
+    
+    if (!_operationQueue) {
+        _operationQueue = [[NSOperationQueue alloc] init];
+    }
+    return _operationQueue;
+}
+
+- (NSCache *)imageCache{
+    
+    if (!_imageCache) {
+        _imageCache = [[NSCache alloc] init];
+    }
+    return _imageCache;
+}
+
+- (NSMutableDictionary *)operationDicM{
+    
+    if (!_operationDicM) {
+        
+        _operationDicM = [[NSMutableDictionary alloc] init];
+        
+    }
+    return _operationDicM;
+}
 @end
