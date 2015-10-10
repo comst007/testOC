@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B7550E29D3D1250B02D1D90B /* libPods-LZSDWebImagePro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB72EA0D1AE7D211BC53BC7D /* libPods-LZSDWebImagePro.a */; };
+		CB30F44B1BC8E6C400FB4D05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB30F44A1BC8E6C400FB4D05 /* main.m */; };
+		CB30F44E1BC8E6C400FB4D05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB30F44D1BC8E6C400FB4D05 /* AppDelegate.m */; };
+		CB30F4511BC8E6C400FB4D05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB30F4501BC8E6C400FB4D05 /* ViewController.m */; };
+		CB30F4541BC8E6C400FB4D05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB30F4521BC8E6C400FB4D05 /* Main.storyboard */; };
+		CB30F4561BC8E6C400FB4D05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB30F4551BC8E6C400FB4D05 /* Images.xcassets */; };
+		CB30F4591BC8E6C400FB4D05 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB30F4571BC8E6C400FB4D05 /* LaunchScreen.xib */; };
+		CB30F4651BC8E6C400FB4D05 /* LZSDWebImageProTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB30F4641BC8E6C400FB4D05 /* LZSDWebImageProTests.m */; };
+		CB4FA4EA1BC8EC410002F8C3 /* apps.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB4FA4E91BC8EC410002F8C3 /* apps.plist */; };
+		CB4FA4EE1BC8F31A0002F8C3 /* LZAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4FA4ED1BC8F31A0002F8C3 /* LZAppInfo.m */; };
+		CB4FA4F11BC945C80002F8C3 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4FA4F01BC945C80002F8C3 /* Reachability.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB30F45F1BC8E6C400FB4D05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB30F43D1BC8E6C400FB4D05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB30F4441BC8E6C400FB4D05;
+			remoteInfo = LZSDWebImagePro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		727D9BF703918262A4454EC9 /* Pods-LZSDWebImagePro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZSDWebImagePro.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZSDWebImagePro/Pods-LZSDWebImagePro.release.xcconfig"; sourceTree = "<group>"; };
+		99BC5AE95FD457DE5D937522 /* Pods-LZSDWebImagePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZSDWebImagePro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZSDWebImagePro/Pods-LZSDWebImagePro.debug.xcconfig"; sourceTree = "<group>"; };
+		BB72EA0D1AE7D211BC53BC7D /* libPods-LZSDWebImagePro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZSDWebImagePro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB30F4451BC8E6C400FB4D05 /* LZSDWebImagePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZSDWebImagePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB30F4491BC8E6C400FB4D05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB30F44A1BC8E6C400FB4D05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB30F44C1BC8E6C400FB4D05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CB30F44D1BC8E6C400FB4D05 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CB30F44F1BC8E6C400FB4D05 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CB30F4501BC8E6C400FB4D05 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CB30F4531BC8E6C400FB4D05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB30F4551BC8E6C400FB4D05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB30F4581BC8E6C400FB4D05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CB30F45E1BC8E6C400FB4D05 /* LZSDWebImageProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZSDWebImageProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB30F4631BC8E6C400FB4D05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB30F4641BC8E6C400FB4D05 /* LZSDWebImageProTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZSDWebImageProTests.m; sourceTree = "<group>"; };
+		CB4FA4E91BC8EC410002F8C3 /* apps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = apps.plist; sourceTree = "<group>"; };
+		CB4FA4EC1BC8F31A0002F8C3 /* LZAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAppInfo.h; sourceTree = "<group>"; };
+		CB4FA4ED1BC8F31A0002F8C3 /* LZAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAppInfo.m; sourceTree = "<group>"; };
+		CB4FA4EF1BC945C80002F8C3 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		CB4FA4F01BC945C80002F8C3 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB30F4421BC8E6C400FB4D05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7550E29D3D1250B02D1D90B /* libPods-LZSDWebImagePro.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30F45B1BC8E6C400FB4D05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB30F43C1BC8E6C400FB4D05 = {
+			isa = PBXGroup;
+			children = (
+				CB30F4471BC8E6C400FB4D05 /* LZSDWebImagePro */,
+				CB30F4611BC8E6C400FB4D05 /* LZSDWebImageProTests */,
+				CB30F4461BC8E6C400FB4D05 /* Products */,
+				E246959A605625E56E8AA614 /* Pods */,
+				F48C3AD7BA2DDF9F9CF8DE92 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CB30F4461BC8E6C400FB4D05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB30F4451BC8E6C400FB4D05 /* LZSDWebImagePro.app */,
+				CB30F45E1BC8E6C400FB4D05 /* LZSDWebImageProTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB30F4471BC8E6C400FB4D05 /* LZSDWebImagePro */ = {
+			isa = PBXGroup;
+			children = (
+				CB4FA4EF1BC945C80002F8C3 /* Reachability.h */,
+				CB4FA4F01BC945C80002F8C3 /* Reachability.m */,
+				CB4FA4E91BC8EC410002F8C3 /* apps.plist */,
+				CB4FA4EC1BC8F31A0002F8C3 /* LZAppInfo.h */,
+				CB4FA4ED1BC8F31A0002F8C3 /* LZAppInfo.m */,
+				CB30F44C1BC8E6C400FB4D05 /* AppDelegate.h */,
+				CB30F44D1BC8E6C400FB4D05 /* AppDelegate.m */,
+				CB30F44F1BC8E6C400FB4D05 /* ViewController.h */,
+				CB30F4501BC8E6C400FB4D05 /* ViewController.m */,
+				CB30F4521BC8E6C400FB4D05 /* Main.storyboard */,
+				CB30F4551BC8E6C400FB4D05 /* Images.xcassets */,
+				CB30F4571BC8E6C400FB4D05 /* LaunchScreen.xib */,
+				CB30F4481BC8E6C400FB4D05 /* Supporting Files */,
+			);
+			path = LZSDWebImagePro;
+			sourceTree = "<group>";
+		};
+		CB30F4481BC8E6C400FB4D05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB30F4491BC8E6C400FB4D05 /* Info.plist */,
+				CB30F44A1BC8E6C400FB4D05 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB30F4611BC8E6C400FB4D05 /* LZSDWebImageProTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB30F4641BC8E6C400FB4D05 /* LZSDWebImageProTests.m */,
+				CB30F4621BC8E6C400FB4D05 /* Supporting Files */,
+			);
+			path = LZSDWebImageProTests;
+			sourceTree = "<group>";
+		};
+		CB30F4621BC8E6C400FB4D05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB30F4631BC8E6C400FB4D05 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E246959A605625E56E8AA614 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99BC5AE95FD457DE5D937522 /* Pods-LZSDWebImagePro.debug.xcconfig */,
+				727D9BF703918262A4454EC9 /* Pods-LZSDWebImagePro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F48C3AD7BA2DDF9F9CF8DE92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB72EA0D1AE7D211BC53BC7D /* libPods-LZSDWebImagePro.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB30F4441BC8E6C400FB4D05 /* LZSDWebImagePro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB30F4681BC8E6C400FB4D05 /* Build configuration list for PBXNativeTarget "LZSDWebImagePro" */;
+			buildPhases = (
+				574FE5E881390F6AF98B6CE4 /* Check Pods Manifest.lock */,
+				CB30F4411BC8E6C400FB4D05 /* Sources */,
+				CB30F4421BC8E6C400FB4D05 /* Frameworks */,
+				CB30F4431BC8E6C400FB4D05 /* Resources */,
+				92CE0E27EA5E65980882B98E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LZSDWebImagePro;
+			productName = LZSDWebImagePro;
+			productReference = CB30F4451BC8E6C400FB4D05 /* LZSDWebImagePro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB30F45D1BC8E6C400FB4D05 /* LZSDWebImageProTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB30F46B1BC8E6C400FB4D05 /* Build configuration list for PBXNativeTarget "LZSDWebImageProTests" */;
+			buildPhases = (
+				CB30F45A1BC8E6C400FB4D05 /* Sources */,
+				CB30F45B1BC8E6C400FB4D05 /* Frameworks */,
+				CB30F45C1BC8E6C400FB4D05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB30F4601BC8E6C400FB4D05 /* PBXTargetDependency */,
+			);
+			name = LZSDWebImageProTests;
+			productName = LZSDWebImageProTests;
+			productReference = CB30F45E1BC8E6C400FB4D05 /* LZSDWebImageProTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB30F43D1BC8E6C400FB4D05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = com.comst1314;
+				TargetAttributes = {
+					CB30F4441BC8E6C400FB4D05 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					CB30F45D1BC8E6C400FB4D05 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = CB30F4441BC8E6C400FB4D05;
+					};
+				};
+			};
+			buildConfigurationList = CB30F4401BC8E6C400FB4D05 /* Build configuration list for PBXProject "LZSDWebImagePro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB30F43C1BC8E6C400FB4D05;
+			productRefGroup = CB30F4461BC8E6C400FB4D05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB30F4441BC8E6C400FB4D05 /* LZSDWebImagePro */,
+				CB30F45D1BC8E6C400FB4D05 /* LZSDWebImageProTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB30F4431BC8E6C400FB4D05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB4FA4EA1BC8EC410002F8C3 /* apps.plist in Resources */,
+				CB30F4541BC8E6C400FB4D05 /* Main.storyboard in Resources */,
+				CB30F4591BC8E6C400FB4D05 /* LaunchScreen.xib in Resources */,
+				CB30F4561BC8E6C400FB4D05 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30F45C1BC8E6C400FB4D05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		574FE5E881390F6AF98B6CE4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		92CE0E27EA5E65980882B98E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZSDWebImagePro/Pods-LZSDWebImagePro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB30F4411BC8E6C400FB4D05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB30F4511BC8E6C400FB4D05 /* ViewController.m in Sources */,
+				CB4FA4EE1BC8F31A0002F8C3 /* LZAppInfo.m in Sources */,
+				CB30F44E1BC8E6C400FB4D05 /* AppDelegate.m in Sources */,
+				CB30F44B1BC8E6C400FB4D05 /* main.m in Sources */,
+				CB4FA4F11BC945C80002F8C3 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30F45A1BC8E6C400FB4D05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB30F4651BC8E6C400FB4D05 /* LZSDWebImageProTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB30F4601BC8E6C400FB4D05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB30F4441BC8E6C400FB4D05 /* LZSDWebImagePro */;
+			targetProxy = CB30F45F1BC8E6C400FB4D05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB30F4521BC8E6C400FB4D05 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB30F4531BC8E6C400FB4D05 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB30F4571BC8E6C400FB4D05 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB30F4581BC8E6C400FB4D05 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB30F4661BC8E6C400FB4D05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CB30F4671BC8E6C400FB4D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB30F4691BC8E6C400FB4D05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99BC5AE95FD457DE5D937522 /* Pods-LZSDWebImagePro.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LZSDWebImagePro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CB30F46A1BC8E6C400FB4D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 727D9BF703918262A4454EC9 /* Pods-LZSDWebImagePro.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LZSDWebImagePro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CB30F46C1BC8E6C400FB4D05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LZSDWebImageProTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZSDWebImagePro.app/LZSDWebImagePro";
+			};
+			name = Debug;
+		};
+		CB30F46D1BC8E6C400FB4D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LZSDWebImageProTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZSDWebImagePro.app/LZSDWebImagePro";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB30F4401BC8E6C400FB4D05 /* Build configuration list for PBXProject "LZSDWebImagePro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB30F4661BC8E6C400FB4D05 /* Debug */,
+				CB30F4671BC8E6C400FB4D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB30F4681BC8E6C400FB4D05 /* Build configuration list for PBXNativeTarget "LZSDWebImagePro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB30F4691BC8E6C400FB4D05 /* Debug */,
+				CB30F46A1BC8E6C400FB4D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB30F46B1BC8E6C400FB4D05 /* Build configuration list for PBXNativeTarget "LZSDWebImageProTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB30F46C1BC8E6C400FB4D05 /* Debug */,
+				CB30F46D1BC8E6C400FB4D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB30F43D1BC8E6C400FB4D05 /* Project object */;
+}
