@@ -6,14 +6,31 @@
 //  Copyright (c) 2015年 com.comst1314. All rights reserved.
 //
 
+/*
+ 
+ typedef enum : NSInteger {
+	NotReachable = 0,
+	ReachableViaWiFi,
+	ReachableViaWWAN
+ } NetworkStatus;
+
+ 
+ 
+ */
+/*
+ 
+ -----------------------------971210516111941565206208183
+   ---------------------------971210516111941565206208183
+ */
 #import "ViewController.h"
 #import "LZAppInfo.h"
 #import "UIImageView+WebCache.h"
 #import "Reachability.h"
-@interface ViewController ()
+@interface ViewController () <UIAlertViewDelegate>
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 @property (nonatomic, strong) NSCache *imageCache;
 @property (nonatomic, strong) NSMutableDictionary *operationDicM;
+@property (nonatomic, strong) Reachability *reach;
 @end
 
 @implementation ViewController
@@ -21,10 +38,58 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusChanged:) name:kReachabilityChangedNotification object:nil];
     [self networkStatus];
 }
 
+- (void)statusChanged:(NSNotification *)noti{
+
+    
+    Reachability *reach = [noti object];
+    NSLog(@"status changed: current status: %@", [self statusString:[reach currentReachabilityStatus]]);
+    
+    
+}
+
+- (NSString *)statusString:(NetworkStatus)status{
+    NSString *statusDesp = @"" ;
+    switch (status) {
+        case NotReachable:
+            
+            statusDesp = @"NotReachable";
+            break;
+            
+        case ReachableViaWiFi:
+            
+            statusDesp = @"ReachableViaWifi";
+            break;
+            
+        case ReachableViaWWAN:
+            statusDesp = @"ReachableViaWAN";
+            break;
+            
+        default:
+            break;
+            
+    }
+    return statusDesp;
+
+}
 - (void)networkStatus{
+    self.reach = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    [self.reach startNotifier];
+    NetworkStatus status = [self.reach currentReachabilityStatus];
+    NSString *statusDesp = [self statusString:status];
+   
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:statusDesp message:@"status" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    [alert show];
+    
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
 }
 
