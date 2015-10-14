@@ -16,10 +16,21 @@
 
 - (void)sendRequest:(NSString *)username password:(NSString *)password{
     NSString *urlString = @"http://120.24.236.135/Comst/login.php";
-    urlString = [NSString stringWithFormat:@"%@?username=%@&password=%@", urlString, username, password];
+    
     NSURL *requestURL = [NSURL URLWithString:urlString];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:requestURL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:20];
-    [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+    
+    
+    NSMutableURLRequest *requestM = [[NSMutableURLRequest alloc] initWithURL:requestURL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:20];
+    
+    requestM.HTTPMethod = @"POST";
+    
+    NSString *postString = [NSString stringWithFormat:@"username=%@&password=%@", username, password];
+    NSData *dataM = [postString dataUsingEncoding:NSUTF8StringEncoding];
+    requestM.HTTPBody = dataM;
+    
+    
+    
+    [NSURLConnection sendAsynchronousRequest:requestM queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
         if (connectionError == nil && httpResponse.statusCode == 200) {
            

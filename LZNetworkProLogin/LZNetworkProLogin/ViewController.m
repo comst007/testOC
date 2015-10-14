@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self.request sendRequest:@"comst123" password:@"123456"];
+    [self.request sendRequest:@"comst" password:@"123456"];
     
 }
 
