@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MBProgressHUD.h"
+#import "KeychainItemWrapper.h"
 #define kRememberPassword @"rememberPassword"
 #define kLoginUserName  @"loginUserName"
 #define kLoginUserPassword @"loginUserPassword"
@@ -28,8 +29,13 @@
     // Do any additional setup after loading the view, typically from a nib.
     BOOL ifRememberPassword = [[NSUserDefaults standardUserDefaults] valueForKey:kRememberPassword];
     if (ifRememberPassword == YES) {
-        self.usernameTextfield.text = [self decodeFromBase64String:[[NSUserDefaults standardUserDefaults] valueForKey:kLoginUserName]];
-        self.userpasswordTextfield.text = [self decodeFromBase64String: [[NSUserDefaults standardUserDefaults] valueForKey:kLoginUserPassword]]; ;
+        KeychainItemWrapper *dataItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"comst1314.com.logindata" accessGroup:nil];
+//        NSString *account = [dataItem objectForKey:(__bridge id)(kSecAttrAccount)];
+        NSString *dataString  = [dataItem objectForKey:(__bridge id)(kSecValueData)];
+        NSData *dictData = [dataString dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:dictData options:NSJSONReadingMutableContainers error:nil];
+        self.usernameTextfield.text = dict[@"name"];
+        self.userpasswordTextfield.text = dict[@"password"] ;
     }
     
 }
@@ -63,8 +69,8 @@
         [self.alertview hide:YES afterDelay:1];
         return;
     }
-    NSString *username = @"zhangsan";
-    NSString *password = @"zhang";
+    NSString *username = self.usernameTextfield.text;
+    NSString *password = self.userpasswordTextfield.text;
     username = [self encodeToBase64String:username];
     password = [self encodeToBase64String:password];
     NSLog(@"base64: %@, %@", username, password);
@@ -76,9 +82,10 @@
         if ([dict[@"userId"] intValue] == 1) {
             
             if (self.passwordSwitcher.isOn) {
-                [[NSUserDefaults standardUserDefaults] setValue:username forKey:kLoginUserName];
-                [[NSUserDefaults standardUserDefaults] setValue:password forKey:kLoginUserPassword];
-                [[NSUserDefaults standardUserDefaults] synchronize];
+//                [[NSUserDefaults standardUserDefaults] setValue:username forKey:kLoginUserName];
+//                [[NSUserDefaults standardUserDefaults] setValue:password forKey:kLoginUserPassword];
+//                [[NSUserDefaults standardUserDefaults] synchronize];
+                [self saveToKeychain];
             }
         }
     }];
@@ -101,5 +108,21 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 //    NSLog(@"subview: %@", self.view.subviews);
+}
+
+- (void)saveToKeychain{
+    
+    KeychainItemWrapper *userNameKaychainItem =[[KeychainItemWrapper alloc] initWithIdentifier:@"comst1314.com.logindata" accessGroup:nil];
+    [userNameKaychainItem setObject:@"logindata" forKey:(__bridge id)(kSecAttrAccount)];
+    [userNameKaychainItem setObject:(__bridge id)(kSecAttrAccessibleWhenUnlocked) forKey:(__bridge id)(kSecAttrAccessible)];
+    
+    NSDictionary *dict = @{@"name":self.usernameTextfield.text, @"password":self.userpasswordTextfield.text};
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    [userNameKaychainItem setObject:dataString forKey:(__bridge id)(kSecValueData)];
+    
+    
+    
+    
 }
 @end

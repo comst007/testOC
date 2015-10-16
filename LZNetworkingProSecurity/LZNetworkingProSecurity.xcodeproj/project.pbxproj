@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB35B55E1BD0E50B00A772F8 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB35B55D1BD0E50B00A772F8 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CBF19DB61BD0295900CC0350 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF19DB51BD0295900CC0350 /* main.m */; };
 		CBF19DB91BD0295900CC0350 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF19DB81BD0295900CC0350 /* AppDelegate.m */; };
 		CBF19DBC1BD0295900CC0350 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF19DBB1BD0295900CC0350 /* ViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB35B55C1BD0E50B00A772F8 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		CB35B55D1BD0E50B00A772F8 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		CBF19DB01BD0295900CC0350 /* LZNetworkingProSecurity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZNetworkingProSecurity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF19DB41BD0295900CC0350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBF19DB51BD0295900CC0350 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 		CBF19DDD1BD0350100CC0350 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				CB35B55C1BD0E50B00A772F8 /* KeychainItemWrapper.h */,
+				CB35B55D1BD0E50B00A772F8 /* KeychainItemWrapper.m */,
 				CBF19DDE1BD0350F00CC0350 /* MBProgressHUD.h */,
 				CBF19DDF1BD0350F00CC0350 /* MBProgressHUD.m */,
 			);
@@ -247,6 +252,7 @@
 			files = (
 				CBF19DBC1BD0295900CC0350 /* ViewController.m in Sources */,
 				CBF19DE51BD045EE00CC0350 /* LZRequest.m in Sources */,
+				CB35B55E1BD0E50B00A772F8 /* KeychainItemWrapper.m in Sources */,
 				CBF19DB91BD0295900CC0350 /* AppDelegate.m in Sources */,
 				CBF19DB61BD0295900CC0350 /* main.m in Sources */,
 				CBF19DE01BD0350F00CC0350 /* MBProgressHUD.m in Sources */,
@@ -308,6 +314,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhao Liu (6CXU4P7XB5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -351,7 +358,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhao Liu (6CXU4P7XB5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhao Liu (6CXU4P7XB5)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -444,6 +452,7 @@
 				CBF19DD51BD0295900CC0350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBF19DD61BD0295900CC0350 /* Build configuration list for PBXNativeTarget "LZNetworkingProSecurityTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +461,7 @@
 				CBF19DD81BD0295900CC0350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
