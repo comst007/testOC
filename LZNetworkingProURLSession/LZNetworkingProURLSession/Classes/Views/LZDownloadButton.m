@@ -17,6 +17,9 @@
 @property (nonatomic, strong) UIBezierPath *progressPath;
 
 @property (nonatomic, strong) CAShapeLayer *progressShapeLayer;
+
+@property (nonatomic, strong) UIImageView *imageview;
+
 @end
 
 @implementation LZDownloadButton
@@ -26,7 +29,7 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        self.orignalFrame = self.frame;
+
         [self setup];
         
     }
@@ -39,7 +42,7 @@
     self = [super initWithCoder:aDecoder];
     
     if (self) {
-        self.orignalFrame = self.frame;
+        
         [self setup];
     }
     
@@ -48,6 +51,10 @@
 
 - (void)setup{
     
+    self.orignalFrame = self.frame;
+    self.imageview = [[UIImageView alloc] initWithFrame:self.bounds];
+    [self addSubview:self.imageview];
+    self.imageview.image = [UIImage imageNamed:@"downloadicon"];
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(beginDownload)];
     
     [self addGestureRecognizer:tapGesture];
@@ -58,7 +65,8 @@
 - (void)beginDownload{
     
     self.userInteractionEnabled = NO;
-    
+    self.orignalFrame = self.frame;
+    [self.imageview removeFromSuperview];
     self.layer.cornerRadius = self.progressBarHeight * 0.5;
     
     for (CALayer *layer in self.layer.sublayers) {
@@ -120,6 +128,9 @@
         [layer removeAllAnimations];
         [layer removeFromSuperlayer];
     }
+    self.progressShapeLayer = nil;
+    self.progressPath = nil;
+    [self addSubview:self.imageview];
     self.userInteractionEnabled = YES;
 }
 

@@ -7,16 +7,24 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LZUserInfoViewController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+- (void)loadUserinfoFrame{
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"UserInfo" bundle:[NSBundle mainBundle]];
+    UINavigationController *nvc = [sb instantiateViewControllerWithIdentifier:@"LZUserInfoNav"];
+    self.window.rootViewController = nvc;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor whiteColor];
     return YES;
 }
 

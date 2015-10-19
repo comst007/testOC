@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SB0-oM-ix3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -7,13 +7,13 @@
         <!--Navigation Controller-->
         <scene sceneID="vCb-S2-aeu">
             <objects>
-                <navigationController id="SB0-oM-ix3" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LZUserInfoNav" id="SB0-oM-ix3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zC4-ID-d0g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Gg4-Qi-Ni3" kind="relationship" relationship="rootViewController" id="rVF-x8-Q6Z"/>
+                        <segue destination="Gg4-Qi-Ni3" kind="relationship" relationship="rootViewController" id="moO-Iv-gIl"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H5G-2H-VBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -33,15 +33,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ida-tU-MFJ">
-                                <rect key="frame" x="198" y="94" width="205" height="189"/>
+                                <rect key="frame" x="10" y="94" width="150" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="189" id="ljI-HY-9i3"/>
-                                    <constraint firstAttribute="width" constant="205" id="lpJ-M0-zh3"/>
+                                    <constraint firstAttribute="height" constant="150" id="ljI-HY-9i3"/>
+                                    <constraint firstAttribute="width" constant="150" id="lpJ-M0-zh3"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="75"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJw-5x-Mfm" customClass="LZDownloadButton">
-                                <rect key="frame" x="260" y="291" width="80" height="80"/>
+                                <rect key="frame" x="45" y="252" width="80" height="80"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="1LO-wW-e2f"/>
@@ -52,23 +58,55 @@
                                         <integer key="value" value="40"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progressBarWidth">
-                                        <integer key="value" value="100"/>
+                                        <integer key="value" value="150"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progressBarHeight">
                                         <integer key="value" value="40"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLd-sI-JiB">
+                                <rect key="frame" x="201" y="94" width="383" height="150"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="QYY-zo-Iq9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QJw-5x-Mfm" firstAttribute="top" secondItem="ida-tU-MFJ" secondAttribute="bottom" constant="8" id="A40-5Q-TJy"/>
                             <constraint firstAttribute="centerX" secondItem="QJw-5x-Mfm" secondAttribute="centerX" id="TIO-O0-Bkg"/>
+                            <constraint firstItem="fLd-sI-JiB" firstAttribute="leading" secondItem="ida-tU-MFJ" secondAttribute="trailing" constant="41" id="Tz8-fC-tUF"/>
+                            <constraint firstItem="ida-tU-MFJ" firstAttribute="centerY" secondItem="fLd-sI-JiB" secondAttribute="centerY" id="X2g-OI-1hI"/>
+                            <constraint firstItem="ida-tU-MFJ" firstAttribute="centerX" secondItem="QJw-5x-Mfm" secondAttribute="centerX" id="afG-TA-Bmi"/>
+                            <constraint firstAttribute="trailing" secondItem="fLd-sI-JiB" secondAttribute="trailing" constant="16" id="ekD-ul-IBB"/>
                             <constraint firstItem="ida-tU-MFJ" firstAttribute="top" secondItem="Sde-Ss-qZn" secondAttribute="bottom" constant="30" id="hjg-61-vQu"/>
                             <constraint firstAttribute="centerX" secondItem="ida-tU-MFJ" secondAttribute="centerX" id="xKX-mJ-mz1"/>
+                            <constraint firstItem="ida-tU-MFJ" firstAttribute="leading" secondItem="GfP-Ou-2q0" secondAttribute="leading" constant="10" id="z5c-yy-GH0"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="alpha">
+                                <integer key="value" value="0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xKX-mJ-mz1"/>
+                                <exclude reference="TIO-O0-Bkg"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ZYN-Og-18n"/>
+                    <connections>
+                        <outlet property="aboutSelfLabel" destination="fLd-sI-JiB" id="94E-p0-rYN"/>
+                        <outlet property="downloadButton" destination="QJw-5x-Mfm" id="QR5-mi-Zlc"/>
+                        <outlet property="headiconImageview" destination="ida-tU-MFJ" id="YKX-Fj-xRt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Svp-0X-c7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

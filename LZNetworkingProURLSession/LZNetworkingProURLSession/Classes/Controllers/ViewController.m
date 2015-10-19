@@ -11,6 +11,8 @@
 #import "MBProgressHUD.h"
 #import "KeychainItemWrapper.h"
 #import "LZGlobal.h"
+#import "LZParser.h"
+#import "AppDelegate.h"
 #define kKeychainID @"comst1314.com.201510081230"
 #define kRememberPassword @"remeberpassword"
 #define kUsername @"username"
@@ -93,13 +95,74 @@
             NSString *dataString = [[NSString alloc] initWithData:userData encoding:NSUTF8StringEncoding];
             [keychainItem setObject:dataString forKey:(__bridge id)(kSecValueData)];
             
-            [LZGlobal sharedglobal].username = username;
+            
+            LZParser *parser = [[LZParser alloc] init];
+            [LZGlobal sharedglobal].userinfo = [parser parseUserinfoFromJsonData:loginRequest.responseData];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                CABasicAnimation *transformAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
+                transformAnimation.fromValue = @(0);
+                transformAnimation.toValue = @(M_PI * 0.5);
+                transformAnimation.delegate = self;
+                transformAnimation.duration = 1;
+                transformAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+                [self.view.layer addAnimation:transformAnimation forKey:@"rotationAnimation"];
+                
+                CABasicAnimation *alpahAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+                alpahAnimation.fromValue = @1;
+                alpahAnimation.delegate = self;
+                alpahAnimation.duration = 0.8;
+                alpahAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+                
+                [self.view.layer addAnimation:alpahAnimation forKey:@"alphaAnimation"];
+//
+//                CAAnimationGroup *groupAnimation = [[CAAnimationGroup alloc] init];
+//                
+//                groupAnimation.animations = @[transformAnimation, alpahAnimation];
+//                
+//                [self.view.layer addAnimation:groupAnimation forKey:@"groupAnimation"];
+            });
+            
+        }else{
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                MBProgressHUD *alert = [[MBProgressHUD alloc] initWithView:self.view];
+                alert.minShowTime = 2;
+                alert.mode = MBProgressHUDModeText;
+                alert.labelText = @"用户名密码不正确";
+                self.hidesBottomBarWhenPushed = YES;
+                [self.view addSubview:alert];
+                [alert show:YES];
+                [alert hide:YES afterDelay:2];
+            });
+            
         }
         
     }];
     
 }
 
+- (void)animationDidStart:(CAAnimation *)anim{
+    
+    if ([self.view.layer animationForKey:@"rotationAnimation"] == anim) {
+        self.view.alpha = 0;
+    }
+}
+
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    
+            
+        [self.view.layer removeAllAnimations];
+        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        [appDelegate loadUserinfoFrame];
+        
+    
+    
+    //NSLog(@" animation end: %@ ", anim);
+
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     

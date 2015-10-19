@@ -18,6 +18,9 @@
 		CB773F3E1BD33B390028723D /* LZLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB773F3D1BD33B390028723D /* LZLoginRequest.m */; };
 		CB773F481BD33CAE0028723D /* NSString+LZCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = CB773F471BD33CAE0028723D /* NSString+LZCoding.m */; };
 		CB773F4B1BD341C40028723D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CB773F4A1BD341C40028723D /* MBProgressHUD.m */; };
+		CB982FAF1BD4D5B400996185 /* LZUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB982FAE1BD4D5B400996185 /* LZUserInfo.m */; };
+		CB982FB21BD4D61600996185 /* LZParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CB982FB11BD4D61600996185 /* LZParser.m */; };
+		CB982FB51BD4F7F300996185 /* LZIconRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB982FB41BD4F7F300996185 /* LZIconRequest.m */; };
 		CBBE44AF1BD38048008D0C3E /* LZGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE44AE1BD38048008D0C3E /* LZGlobal.m */; };
 		CBBE44B11BD381EB008D0C3E /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBE44B01BD381EB008D0C3E /* UserInfo.storyboard */; };
 		CBBE44B61BD3825D008D0C3E /* LZUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE44B51BD3825D008D0C3E /* LZUserInfoViewController.m */; };
@@ -58,6 +61,12 @@
 		CB773F471BD33CAE0028723D /* NSString+LZCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LZCoding.m"; sourceTree = "<group>"; };
 		CB773F491BD341C40028723D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		CB773F4A1BD341C40028723D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		CB982FAD1BD4D5B400996185 /* LZUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZUserInfo.h; sourceTree = "<group>"; };
+		CB982FAE1BD4D5B400996185 /* LZUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZUserInfo.m; sourceTree = "<group>"; };
+		CB982FB01BD4D61600996185 /* LZParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZParser.h; sourceTree = "<group>"; };
+		CB982FB11BD4D61600996185 /* LZParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZParser.m; sourceTree = "<group>"; };
+		CB982FB31BD4F7F300996185 /* LZIconRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZIconRequest.h; sourceTree = "<group>"; };
+		CB982FB41BD4F7F300996185 /* LZIconRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZIconRequest.m; sourceTree = "<group>"; };
 		CBBE44AD1BD38048008D0C3E /* LZGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZGlobal.h; sourceTree = "<group>"; };
 		CBBE44AE1BD38048008D0C3E /* LZGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZGlobal.m; sourceTree = "<group>"; };
 		CBBE44B01BD381EB008D0C3E /* UserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
@@ -181,6 +190,8 @@
 		CB773F171BD32EA40028723D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CB982FAD1BD4D5B400996185 /* LZUserInfo.h */,
+				CB982FAE1BD4D5B400996185 /* LZUserInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +199,8 @@
 		CB773F181BD32EA40028723D /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				CB982FB01BD4D61600996185 /* LZParser.h */,
+				CB982FB11BD4D61600996185 /* LZParser.m */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -262,6 +275,8 @@
 				CB773F3D1BD33B390028723D /* LZLoginRequest.m */,
 				CBBE44BA1BD3AC3E008D0C3E /* LZDownLoadRequest.h */,
 				CBBE44BB1BD3AC3E008D0C3E /* LZDownLoadRequest.m */,
+				CB982FB31BD4F7F300996185 /* LZIconRequest.h */,
+				CB982FB41BD4F7F300996185 /* LZIconRequest.m */,
 			);
 			name = Requests;
 			path = Publics/Requests;
@@ -409,10 +424,13 @@
 				CB773F481BD33CAE0028723D /* NSString+LZCoding.m in Sources */,
 				CB773F3E1BD33B390028723D /* LZLoginRequest.m in Sources */,
 				CB773F291BD32EA40028723D /* ViewController.m in Sources */,
+				CB982FAF1BD4D5B400996185 /* LZUserInfo.m in Sources */,
 				CBBE44AF1BD38048008D0C3E /* LZGlobal.m in Sources */,
 				CBBE44B91BD3A11E008D0C3E /* LZDownloadButton.m in Sources */,
 				CBBE44BC1BD3AC3E008D0C3E /* LZDownLoadRequest.m in Sources */,
+				CB982FB21BD4D61600996185 /* LZParser.m in Sources */,
 				CB773F2E1BD32EA40028723D /* main.m in Sources */,
+				CB982FB51BD4F7F300996185 /* LZIconRequest.m in Sources */,
 				CBBE44B61BD3825D008D0C3E /* LZUserInfoViewController.m in Sources */,
 				CB773F281BD32EA40028723D /* AppDelegate.m in Sources */,
 				CB773F4B1BD341C40028723D /* MBProgressHUD.m in Sources */,
