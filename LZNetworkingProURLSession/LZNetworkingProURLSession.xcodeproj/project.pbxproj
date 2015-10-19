@@ -21,6 +21,10 @@
 		CB982FAF1BD4D5B400996185 /* LZUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB982FAE1BD4D5B400996185 /* LZUserInfo.m */; };
 		CB982FB21BD4D61600996185 /* LZParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CB982FB11BD4D61600996185 /* LZParser.m */; };
 		CB982FB51BD4F7F300996185 /* LZIconRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB982FB41BD4F7F300996185 /* LZIconRequest.m */; };
+		CB982FB81BD5880600996185 /* LZUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB982FB71BD5880600996185 /* LZUploadRequest.m */; };
+		CB982FBA1BD58DDD00996185 /* hello.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB982FB91BD58DDD00996185 /* hello.txt */; };
+		CB982FBF1BD5926F00996185 /* NSString+LZMIMETYPE.m in Sources */ = {isa = PBXBuildFile; fileRef = CB982FBC1BD5926F00996185 /* NSString+LZMIMETYPE.m */; };
+		CB982FC01BD5926F00996185 /* LZMultipartForm.m in Sources */ = {isa = PBXBuildFile; fileRef = CB982FBE1BD5926F00996185 /* LZMultipartForm.m */; };
 		CBBE44AF1BD38048008D0C3E /* LZGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE44AE1BD38048008D0C3E /* LZGlobal.m */; };
 		CBBE44B11BD381EB008D0C3E /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBE44B01BD381EB008D0C3E /* UserInfo.storyboard */; };
 		CBBE44B61BD3825D008D0C3E /* LZUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE44B51BD3825D008D0C3E /* LZUserInfoViewController.m */; };
@@ -67,6 +71,13 @@
 		CB982FB11BD4D61600996185 /* LZParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZParser.m; sourceTree = "<group>"; };
 		CB982FB31BD4F7F300996185 /* LZIconRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZIconRequest.h; sourceTree = "<group>"; };
 		CB982FB41BD4F7F300996185 /* LZIconRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZIconRequest.m; sourceTree = "<group>"; };
+		CB982FB61BD5880600996185 /* LZUploadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZUploadRequest.h; sourceTree = "<group>"; };
+		CB982FB71BD5880600996185 /* LZUploadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZUploadRequest.m; sourceTree = "<group>"; };
+		CB982FB91BD58DDD00996185 /* hello.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hello.txt; sourceTree = "<group>"; };
+		CB982FBB1BD5926F00996185 /* NSString+LZMIMETYPE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LZMIMETYPE.h"; sourceTree = "<group>"; };
+		CB982FBC1BD5926F00996185 /* NSString+LZMIMETYPE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LZMIMETYPE.m"; sourceTree = "<group>"; };
+		CB982FBD1BD5926F00996185 /* LZMultipartForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMultipartForm.h; sourceTree = "<group>"; };
+		CB982FBE1BD5926F00996185 /* LZMultipartForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMultipartForm.m; sourceTree = "<group>"; };
 		CBBE44AD1BD38048008D0C3E /* LZGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZGlobal.h; sourceTree = "<group>"; };
 		CBBE44AE1BD38048008D0C3E /* LZGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZGlobal.m; sourceTree = "<group>"; };
 		CBBE44B01BD381EB008D0C3E /* UserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
@@ -253,6 +264,7 @@
 		CB773F251BD32EA40028723D /* Surpporting */ = {
 			isa = PBXGroup;
 			children = (
+				CB982FB91BD58DDD00996185 /* hello.txt */,
 				CB773F261BD32EA40028723D /* Info.plist */,
 				CB773F271BD32EA40028723D /* main.m */,
 			);
@@ -277,6 +289,8 @@
 				CBBE44BB1BD3AC3E008D0C3E /* LZDownLoadRequest.m */,
 				CB982FB31BD4F7F300996185 /* LZIconRequest.h */,
 				CB982FB41BD4F7F300996185 /* LZIconRequest.m */,
+				CB982FB61BD5880600996185 /* LZUploadRequest.h */,
+				CB982FB71BD5880600996185 /* LZUploadRequest.m */,
 			);
 			name = Requests;
 			path = Publics/Requests;
@@ -285,6 +299,10 @@
 		CB773F421BD33C0C0028723D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CB982FBB1BD5926F00996185 /* NSString+LZMIMETYPE.h */,
+				CB982FBC1BD5926F00996185 /* NSString+LZMIMETYPE.m */,
+				CB982FBD1BD5926F00996185 /* LZMultipartForm.h */,
+				CB982FBE1BD5926F00996185 /* LZMultipartForm.m */,
 				CB773F461BD33CAE0028723D /* NSString+LZCoding.h */,
 				CB773F471BD33CAE0028723D /* NSString+LZCoding.m */,
 			);
@@ -403,6 +421,7 @@
 				CBBE44B11BD381EB008D0C3E /* UserInfo.storyboard in Resources */,
 				CB773F2F1BD32F2B0028723D /* LaunchScreen.xib in Resources */,
 				CB773F2C1BD32EA40028723D /* Images.xcassets in Resources */,
+				CB982FBA1BD58DDD00996185 /* hello.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,10 +442,13 @@
 				CB773F341BD330DF0028723D /* KeychainItemWrapper.m in Sources */,
 				CB773F481BD33CAE0028723D /* NSString+LZCoding.m in Sources */,
 				CB773F3E1BD33B390028723D /* LZLoginRequest.m in Sources */,
+				CB982FBF1BD5926F00996185 /* NSString+LZMIMETYPE.m in Sources */,
 				CB773F291BD32EA40028723D /* ViewController.m in Sources */,
+				CB982FC01BD5926F00996185 /* LZMultipartForm.m in Sources */,
 				CB982FAF1BD4D5B400996185 /* LZUserInfo.m in Sources */,
 				CBBE44AF1BD38048008D0C3E /* LZGlobal.m in Sources */,
 				CBBE44B91BD3A11E008D0C3E /* LZDownloadButton.m in Sources */,
+				CB982FB81BD5880600996185 /* LZUploadRequest.m in Sources */,
 				CBBE44BC1BD3AC3E008D0C3E /* LZDownLoadRequest.m in Sources */,
 				CB982FB21BD4D61600996185 /* LZParser.m in Sources */,
 				CB773F2E1BD32EA40028723D /* main.m in Sources */,
@@ -494,8 +516,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Zhao Liu (6CXU4P7XB5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhao Liu (6CXU4P7XB5)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -539,8 +561,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Zhao Liu (6CXU4P7XB5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhao Liu (6CXU4P7XB5)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;

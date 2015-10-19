@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) UIImageView *imageview;
 
+@property (nonatomic, assign) BOOL isProgressing;
+@property (nonatomic, assign) BOOL paused;
 @end
 
 @implementation LZDownloadButton
@@ -55,12 +57,30 @@
     self.imageview = [[UIImageView alloc] initWithFrame:self.bounds];
     [self addSubview:self.imageview];
     self.imageview.image = [UIImage imageNamed:@"downloadicon"];
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(beginDownload)];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonTapped)];
     
     [self addGestureRecognizer:tapGesture];
    
 }
 
+- (void)buttonTapped{
+    
+    if (self.isProgressing == NO) {
+        
+        [self beginDownload];
+    }else{
+        //断点续传
+        if (self.paused) {
+            [self.request downloadRequestRsume];
+            self.paused = NO;
+        }else{
+            self.paused = YES;
+            [self.request downloadRequestPause];
+        }
+    }
+    
+    
+}
 
 - (void)beginDownload{
     
@@ -89,9 +109,15 @@
         [UIView animateWithDuration:0.6 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             self.bounds = CGRectMake(0, 0, self.progressBarWidth, self.progressBarHeight);
         } completion:^(BOOL finished) {
+            NSLog(@"%@", [NSThread currentThread]);
             [self.layer removeAnimationForKey:@"cornerRadiusShrinkAnimation"];
+            
+            self.userInteractionEnabled = YES;
+            
+            self.isProgressing = YES;
             NSString *path = @"http://120.24.236.135/Comst/杨-kiss.mp3";
             LZDownLoadRequest *request = [[LZDownLoadRequest alloc] init];
+            self.request = request;
             [request downloadRequest:path delegate:self];
             
         }];
@@ -212,7 +238,8 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.progressShapeLayer removeFromSuperlayer];
-        
+        self.isProgressing = NO;
+        self.userInteractionEnabled = NO;
         self.layer.cornerRadius = self.orignalFrame.size.height * 0.5;
         
         

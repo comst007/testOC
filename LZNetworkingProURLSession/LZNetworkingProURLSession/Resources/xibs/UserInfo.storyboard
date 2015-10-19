@@ -76,16 +76,47 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vY0-xo-VSG">
+                                <rect key="frame" x="103" y="550" width="394" height="30"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uLA-3a-3hT"/>
+                                </constraints>
+                                <state key="normal" title="选择上传图片">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="uploadButtonClick:" destination="Gg4-Qi-Ni3" eventType="touchUpInside" id="7vD-MR-EBH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-w9-cwo">
+                                <rect key="frame" x="200" y="342" width="200" height="200"/>
+                                <color key="backgroundColor" red="1" green="0.78391618789999995" blue="0.31814445330000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="YRb-ll-zmK"/>
+                                    <constraint firstAttribute="width" constant="200" id="tYr-2L-lAp"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QJw-5x-Mfm" firstAttribute="top" secondItem="ida-tU-MFJ" secondAttribute="bottom" constant="8" id="A40-5Q-TJy"/>
+                            <constraint firstAttribute="centerX" secondItem="bbc-w9-cwo" secondAttribute="centerX" id="OPX-kB-tJO"/>
                             <constraint firstAttribute="centerX" secondItem="QJw-5x-Mfm" secondAttribute="centerX" id="TIO-O0-Bkg"/>
                             <constraint firstItem="fLd-sI-JiB" firstAttribute="leading" secondItem="ida-tU-MFJ" secondAttribute="trailing" constant="41" id="Tz8-fC-tUF"/>
                             <constraint firstItem="ida-tU-MFJ" firstAttribute="centerY" secondItem="fLd-sI-JiB" secondAttribute="centerY" id="X2g-OI-1hI"/>
+                            <constraint firstItem="vY0-xo-VSG" firstAttribute="top" secondItem="bbc-w9-cwo" secondAttribute="bottom" constant="8" id="aGY-30-73D"/>
                             <constraint firstItem="ida-tU-MFJ" firstAttribute="centerX" secondItem="QJw-5x-Mfm" secondAttribute="centerX" id="afG-TA-Bmi"/>
                             <constraint firstAttribute="trailing" secondItem="fLd-sI-JiB" secondAttribute="trailing" constant="16" id="ekD-ul-IBB"/>
+                            <constraint firstItem="PkC-N6-Mbx" firstAttribute="top" secondItem="vY0-xo-VSG" secondAttribute="bottom" constant="20" id="hQw-he-cNk"/>
                             <constraint firstItem="ida-tU-MFJ" firstAttribute="top" secondItem="Sde-Ss-qZn" secondAttribute="bottom" constant="30" id="hjg-61-vQu"/>
+                            <constraint firstAttribute="trailing" secondItem="vY0-xo-VSG" secondAttribute="trailing" constant="103" id="oeN-Od-ZHq"/>
+                            <constraint firstItem="vY0-xo-VSG" firstAttribute="leading" secondItem="GfP-Ou-2q0" secondAttribute="leading" constant="103" id="tRR-Ba-QPl"/>
                             <constraint firstAttribute="centerX" secondItem="ida-tU-MFJ" secondAttribute="centerX" id="xKX-mJ-mz1"/>
                             <constraint firstItem="ida-tU-MFJ" firstAttribute="leading" secondItem="GfP-Ou-2q0" secondAttribute="leading" constant="10" id="z5c-yy-GH0"/>
                         </constraints>
@@ -106,6 +137,8 @@
                         <outlet property="aboutSelfLabel" destination="fLd-sI-JiB" id="94E-p0-rYN"/>
                         <outlet property="downloadButton" destination="QJw-5x-Mfm" id="QR5-mi-Zlc"/>
                         <outlet property="headiconImageview" destination="ida-tU-MFJ" id="YKX-Fj-xRt"/>
+                        <outlet property="uploadButton" destination="vY0-xo-VSG" id="mUK-vb-h0k"/>
+                        <outlet property="uploadImageview" destination="bbc-w9-cwo" id="bty-6w-NQX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Svp-0X-c7d" userLabel="First Responder" sceneMemberID="firstResponder"/>

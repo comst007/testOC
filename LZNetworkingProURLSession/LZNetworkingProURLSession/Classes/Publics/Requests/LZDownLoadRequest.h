@@ -22,9 +22,16 @@
 
 @interface LZDownLoadRequest : NSObject
 
+@property (nonatomic, copy) NSString *filePath;
+
 @property (nonatomic, assign) CGFloat progress;
 
 @property (nonatomic, weak) id<LZDownloadRequestDelegate> delegate;
 
 - (void)downloadRequest:(NSString *)path delegate:(id<LZDownloadRequestDelegate>)delegate;
+
+- (void)downloadRequestPause;
+
+- (void)downloadRequestRsume;
+
 @end
