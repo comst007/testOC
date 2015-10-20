@@ -5,7 +5,7 @@
 //  Created by comst on 15/10/18.
 //  Copyright (c) 2015年 com.comst1314. All rights reserved.
 //
-
+#import <AVFoundation/AVFoundation.h>
 #import "LZUserInfoViewController.h"
 #import "LZDownLoadRequest.h"
 #import "LZGlobal.h"
@@ -19,7 +19,13 @@ typedef NS_ENUM(NSInteger, LZUploadButtonSate) {
     kUploadButtonSateSelect,
     kUploadButtonStateUpload
 };
-@interface LZUserInfoViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+typedef NS_ENUM(NSInteger, LZMp3PlayingState) {
+    kMp3PlayingSateNo,
+    kMp3PlayingStatePlaying,
+    kMp3PlayingStatePause
+};
+@interface LZUserInfoViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVAudioPlayerDelegate>
 @property (nonatomic, strong) LZDownLoadRequest *request;
 @property (weak, nonatomic) IBOutlet UILabel *aboutSelfLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *headiconImageview;
@@ -27,12 +33,15 @@ typedef NS_ENUM(NSInteger, LZUploadButtonSate) {
 @property (weak, nonatomic) IBOutlet UIButton *uploadButton;
 
 @property (weak, nonatomic) IBOutlet UIImageView *uploadImageview;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
 
 @property (nonatomic, assign) CGFloat startAngle;
 @property (nonatomic, assign) CGFloat endAngle;
 @property (nonatomic, strong) CADisplayLink *displayLink;
 @property (nonatomic, strong) CAShapeLayer *shapeLayer;
 @property (nonatomic, assign) LZUploadButtonSate uploadButtonSate;
+@property (nonatomic, strong) AVAudioPlayer *mp3Player;
+@property (nonatomic, assign) LZMp3PlayingState mp3Playing;
 @end
 
 @implementation LZUserInfoViewController
@@ -42,6 +51,7 @@ typedef NS_ENUM(NSInteger, LZUploadButtonSate) {
     self.title = [LZGlobal sharedglobal].userinfo.username;
     [UIView animateWithDuration:1.0 animations:^{
         self.view.alpha = 1.0;
+        
     }];
     self.aboutSelfLabel.text = [LZGlobal sharedglobal].userinfo.aboutself;
     
@@ -71,8 +81,38 @@ typedef NS_ENUM(NSInteger, LZUploadButtonSate) {
     }];
     
     self.uploadButtonSate = kUploadButtonSateSelect;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mp3DownloadComplete) name:@"mp3DownloadComplationg" object:self.downloadButton];
 }
 
+- (void)mp3DownloadComplete{
+    self.playButton.hidden = NO ;
+}
+
+- (IBAction)playMp3:(UIButton *)sender {
+    if (self.mp3Playing == kMp3PlayingStatePlaying) {
+        [self.mp3Player pause];
+        self.mp3Playing = kMp3PlayingStatePause;
+        
+    }else if (self.mp3Playing == kMp3PlayingStatePause)
+    {
+        [self.mp3Player play];
+        self.mp3Playing = kMp3PlayingStatePlaying;
+    }else{
+        
+        NSURL *mp3URL = [NSURL fileURLWithPath:self.downloadButton.mp3Path];
+        AVAudioPlayer *mp3Player = [[AVAudioPlayer alloc] initWithContentsOfURL:mp3URL fileTypeHint:AVFileTypeMPEGLayer3 error:nil];
+        mp3Player.delegate = self;
+        self.mp3Player = mp3Player;
+        self.mp3Playing = kMp3PlayingStatePlaying;
+        [mp3Player prepareToPlay];
+        [mp3Player play];
+    }
+}
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+    self.mp3Playing = kMp3PlayingSateNo;
+}
 - (void)animationDidStart:(CAAnimation *)anim{
     
 }
@@ -196,6 +236,9 @@ typedef NS_ENUM(NSInteger, LZUploadButtonSate) {
     return _displayLink;
 }
 
+
+
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     LZUploadRequest *request = [[LZUploadRequest alloc] init];
     NSString *filepath = [[NSBundle mainBundle] pathForResource:@"hello.txt" ofType:nil];
@@ -204,4 +247,5 @@ typedef NS_ENUM(NSInteger, LZUploadButtonSate) {
         ;
     }];
 }
+
 @end

@@ -237,6 +237,8 @@
 - (void)downloadRequestDidFinish:(LZDownLoadRequest *)downloadReques{
     
     dispatch_async(dispatch_get_main_queue(), ^{
+        self.mp3Path = downloadReques.filePath;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"mp3DownloadComplationg" object:self];
         [self.progressShapeLayer removeFromSuperlayer];
         self.isProgressing = NO;
         self.userInteractionEnabled = NO;

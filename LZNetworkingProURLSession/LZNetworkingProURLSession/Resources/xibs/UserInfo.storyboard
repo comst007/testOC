@@ -102,10 +102,28 @@
                                     <constraint firstAttribute="width" constant="200" id="tYr-2L-lAp"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDv-XH-Ewb">
+                                <rect key="frame" x="244" y="277" width="340" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.43529412150382996" blue="0.81176471710205078" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zM4-Da-KxQ"/>
+                                </constraints>
+                                <state key="normal" title="播放歌曲">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidden" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playMp3:" destination="Gg4-Qi-Ni3" eventType="touchUpInside" id="G20-dA-3ND"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QJw-5x-Mfm" firstAttribute="top" secondItem="ida-tU-MFJ" secondAttribute="bottom" constant="8" id="A40-5Q-TJy"/>
+                            <constraint firstItem="vDv-XH-Ewb" firstAttribute="leading" secondItem="QJw-5x-Mfm" secondAttribute="trailing" constant="119" id="CVE-Pu-Eao"/>
+                            <constraint firstAttribute="trailing" secondItem="vDv-XH-Ewb" secondAttribute="trailing" constant="16" id="DRy-YW-obh"/>
                             <constraint firstAttribute="centerX" secondItem="bbc-w9-cwo" secondAttribute="centerX" id="OPX-kB-tJO"/>
                             <constraint firstAttribute="centerX" secondItem="QJw-5x-Mfm" secondAttribute="centerX" id="TIO-O0-Bkg"/>
                             <constraint firstItem="fLd-sI-JiB" firstAttribute="leading" secondItem="ida-tU-MFJ" secondAttribute="trailing" constant="41" id="Tz8-fC-tUF"/>
@@ -114,6 +132,7 @@
                             <constraint firstItem="ida-tU-MFJ" firstAttribute="centerX" secondItem="QJw-5x-Mfm" secondAttribute="centerX" id="afG-TA-Bmi"/>
                             <constraint firstAttribute="trailing" secondItem="fLd-sI-JiB" secondAttribute="trailing" constant="16" id="ekD-ul-IBB"/>
                             <constraint firstItem="PkC-N6-Mbx" firstAttribute="top" secondItem="vY0-xo-VSG" secondAttribute="bottom" constant="20" id="hQw-he-cNk"/>
+                            <constraint firstItem="vDv-XH-Ewb" firstAttribute="top" secondItem="fLd-sI-JiB" secondAttribute="bottom" constant="33" id="hUz-mH-s0i"/>
                             <constraint firstItem="ida-tU-MFJ" firstAttribute="top" secondItem="Sde-Ss-qZn" secondAttribute="bottom" constant="30" id="hjg-61-vQu"/>
                             <constraint firstAttribute="trailing" secondItem="vY0-xo-VSG" secondAttribute="trailing" constant="103" id="oeN-Od-ZHq"/>
                             <constraint firstItem="vY0-xo-VSG" firstAttribute="leading" secondItem="GfP-Ou-2q0" secondAttribute="leading" constant="103" id="tRR-Ba-QPl"/>
@@ -137,6 +156,7 @@
                         <outlet property="aboutSelfLabel" destination="fLd-sI-JiB" id="94E-p0-rYN"/>
                         <outlet property="downloadButton" destination="QJw-5x-Mfm" id="QR5-mi-Zlc"/>
                         <outlet property="headiconImageview" destination="ida-tU-MFJ" id="YKX-Fj-xRt"/>
+                        <outlet property="playButton" destination="vDv-XH-Ewb" id="ndx-ik-ENF"/>
                         <outlet property="uploadButton" destination="vY0-xo-VSG" id="mUK-vb-h0k"/>
                         <outlet property="uploadImageview" destination="bbc-w9-cwo" id="bty-6w-NQX"/>
                     </connections>

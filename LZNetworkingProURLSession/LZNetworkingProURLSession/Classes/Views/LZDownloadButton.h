@@ -13,4 +13,5 @@
 @property (nonatomic, assign) CGFloat progressBarWidth;
 @property (nonatomic, assign) CGFloat progressBarHeight;
 
+@property (nonatomic, copy) NSString *mp3Path;
 @end
