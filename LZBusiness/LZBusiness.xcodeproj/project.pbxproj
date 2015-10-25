@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB0CF8A71BDD38FD00F9D5A7 /* LZStuManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0CF8A61BDD38FD00F9D5A7 /* LZStuManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB0CF8A91BDD390200F9D5A7 /* LZStuManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0CF8A81BDD390200F9D5A7 /* LZStuManager.m */; };
+		CB0CF8AB1BDD39EA00F9D5A7 /* LZPersistance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0CF8AA1BDD39EA00F9D5A7 /* LZPersistance.framework */; };
 		CB7162B71BDBEE57000385CF /* LZBusiness.h in Headers */ = {isa = PBXBuildFile; fileRef = CB7162B61BDBEE57000385CF /* LZBusiness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB7162BD1BDBEE57000385CF /* LZBusiness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7162B11BDBEE57000385CF /* LZBusiness.framework */; };
 		CB7162C41BDBEE57000385CF /* LZBusinessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7162C31BDBEE57000385CF /* LZBusinessTests.m */; };
@@ -23,6 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB0CF8A61BDD38FD00F9D5A7 /* LZStuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStuManager.h; sourceTree = "<group>"; };
+		CB0CF8A81BDD390200F9D5A7 /* LZStuManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStuManager.m; sourceTree = "<group>"; };
+		CB0CF8AA1BDD39EA00F9D5A7 /* LZPersistance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LZPersistance.framework; path = "../../../Library/Developer/Xcode/DerivedData/LZTestNotes-cxxibtgzvjzcmjcbqkeolhwtettf/Build/Products/Debug-iphoneos/LZPersistance.framework"; sourceTree = "<group>"; };
 		CB7162B11BDBEE57000385CF /* LZBusiness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LZBusiness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7162B51BDBEE57000385CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB7162B61BDBEE57000385CF /* LZBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZBusiness.h; sourceTree = "<group>"; };
@@ -36,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0CF8AB1BDD39EA00F9D5A7 /* LZPersistance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +60,7 @@
 		CB7162A71BDBEE57000385CF = {
 			isa = PBXGroup;
 			children = (
+				CB0CF8AA1BDD39EA00F9D5A7 /* LZPersistance.framework */,
 				CB7162B31BDBEE57000385CF /* LZBusiness */,
 				CB7162C01BDBEE57000385CF /* LZBusinessTests */,
 				CB7162B21BDBEE57000385CF /* Products */,
@@ -71,6 +79,8 @@
 		CB7162B31BDBEE57000385CF /* LZBusiness */ = {
 			isa = PBXGroup;
 			children = (
+				CB0CF8A61BDD38FD00F9D5A7 /* LZStuManager.h */,
+				CB0CF8A81BDD390200F9D5A7 /* LZStuManager.m */,
 				CB7162B61BDBEE57000385CF /* LZBusiness.h */,
 				CB7162B41BDBEE57000385CF /* Supporting Files */,
 			);
@@ -110,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB7162B71BDBEE57000385CF /* LZBusiness.h in Headers */,
+				CB0CF8A71BDD38FD00F9D5A7 /* LZStuManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0CF8A91BDD390200F9D5A7 /* LZStuManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +340,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/LZTestNotes-cxxibtgzvjzcmjcbqkeolhwtettf/Build/Products/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = LZBusiness/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -345,6 +361,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/LZTestNotes-cxxibtgzvjzcmjcbqkeolhwtettf/Build/Products/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = LZBusiness/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

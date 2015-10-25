@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import <objc/runtime.h>
-#import "LZStuManager.h"
+
+#import "LZBusiness/LZBusiness.h"
 @interface ViewController ()<UISearchBarDelegate>
 
 @property (nonatomic, strong) NSMutableArray *array;

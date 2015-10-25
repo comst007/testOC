@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB0CF8AD1BDD3B0300F9D5A7 /* LZBusiness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0CF8AC1BDD3B0300F9D5A7 /* LZBusiness.framework */; };
+		CB0CF8AF1BDD3B8500F9D5A7 /* LZPersistance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0CF8AE1BDD3B8500F9D5A7 /* LZPersistance.framework */; };
 		CB7162841BDBEE3B000385CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7162831BDBEE3B000385CF /* main.m */; };
 		CB7162871BDBEE3B000385CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7162861BDBEE3B000385CF /* AppDelegate.m */; };
 		CB71628A1BDBEE3B000385CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7162891BDBEE3B000385CF /* ViewController.m */; };
@@ -14,9 +16,6 @@
 		CB71628F1BDBEE3B000385CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB71628E1BDBEE3B000385CF /* Images.xcassets */; };
 		CB7162921BDBEE3B000385CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7162901BDBEE3B000385CF /* LaunchScreen.xib */; };
 		CB71629E1BDBEE3B000385CF /* LZStudentNoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB71629D1BDBEE3B000385CF /* LZStudentNoteTests.m */; };
-		CB7162F91BDC0F44000385CF /* LZStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7162F81BDC0F44000385CF /* LZStudent.m */; };
-		CB7162FD1BDC1A5C000385CF /* LZStuManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7162FC1BDC1A5C000385CF /* LZStuManager.m */; };
-		CB7163001BDC1D43000385CF /* LZStuPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7162FF1BDC1D43000385CF /* LZStuPersistence.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB0CF8AC1BDD3B0300F9D5A7 /* LZBusiness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LZBusiness.framework; path = "../../../Library/Developer/Xcode/DerivedData/LZTestNotes-cxxibtgzvjzcmjcbqkeolhwtettf/Build/Products/Debug-iphoneos/LZBusiness.framework"; sourceTree = "<group>"; };
+		CB0CF8AE1BDD3B8500F9D5A7 /* LZPersistance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LZPersistance.framework; path = "../../../Library/Developer/Xcode/DerivedData/LZTestNotes-cxxibtgzvjzcmjcbqkeolhwtettf/Build/Products/Debug-iphoneos/LZPersistance.framework"; sourceTree = "<group>"; };
 		CB71627E1BDBEE3B000385CF /* LZStudentNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZStudentNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7162821BDBEE3B000385CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB7162831BDBEE3B000385CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,12 +44,6 @@
 		CB7162971BDBEE3B000385CF /* LZStudentNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZStudentNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB71629C1BDBEE3B000385CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB71629D1BDBEE3B000385CF /* LZStudentNoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZStudentNoteTests.m; sourceTree = "<group>"; };
-		CB7162F71BDC0F44000385CF /* LZStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStudent.h; sourceTree = "<group>"; };
-		CB7162F81BDC0F44000385CF /* LZStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStudent.m; sourceTree = "<group>"; };
-		CB7162FB1BDC1A5C000385CF /* LZStuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStuManager.h; sourceTree = "<group>"; };
-		CB7162FC1BDC1A5C000385CF /* LZStuManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStuManager.m; sourceTree = "<group>"; };
-		CB7162FE1BDC1D43000385CF /* LZStuPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStuPersistence.h; sourceTree = "<group>"; };
-		CB7162FF1BDC1D43000385CF /* LZStuPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStuPersistence.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0CF8AF1BDD3B8500F9D5A7 /* LZPersistance.framework in Frameworks */,
+				CB0CF8AD1BDD3B0300F9D5A7 /* LZBusiness.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +69,8 @@
 		CB7162751BDBEE3B000385CF = {
 			isa = PBXGroup;
 			children = (
+				CB0CF8AE1BDD3B8500F9D5A7 /* LZPersistance.framework */,
+				CB0CF8AC1BDD3B0300F9D5A7 /* LZBusiness.framework */,
 				CB7162801BDBEE3B000385CF /* LZStudentNote */,
 				CB71629A1BDBEE3B000385CF /* LZStudentNoteTests */,
 				CB71627F1BDBEE3B000385CF /* Products */,
@@ -132,12 +131,6 @@
 		CB7162FA1BDC1A35000385CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CB7162F71BDC0F44000385CF /* LZStudent.h */,
-				CB7162F81BDC0F44000385CF /* LZStudent.m */,
-				CB7162FB1BDC1A5C000385CF /* LZStuManager.h */,
-				CB7162FC1BDC1A5C000385CF /* LZStuManager.m */,
-				CB7162FE1BDC1D43000385CF /* LZStuPersistence.h */,
-				CB7162FF1BDC1D43000385CF /* LZStuPersistence.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -242,12 +235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB7163001BDC1D43000385CF /* LZStuPersistence.m in Sources */,
 				CB71628A1BDBEE3B000385CF /* ViewController.m in Sources */,
 				CB7162871BDBEE3B000385CF /* AppDelegate.m in Sources */,
 				CB7162841BDBEE3B000385CF /* main.m in Sources */,
-				CB7162F91BDC0F44000385CF /* LZStudent.m in Sources */,
-				CB7162FD1BDC1A5C000385CF /* LZStuManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +365,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/LZTestNotes-cxxibtgzvjzcmjcbqkeolhwtettf/Build/Products/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = LZStudentNote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
@@ -387,6 +381,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/LZTestNotes-cxxibtgzvjzcmjcbqkeolhwtettf/Build/Products/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = LZStudentNote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;

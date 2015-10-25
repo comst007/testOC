@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "LZStudent.h"
-#import "LZStuManager.h"
+
 @interface LZStudentNoteTests : XCTestCase
 
 @end
@@ -29,11 +28,7 @@
 - (void)testExample {
 
     
-    LZStuManager *m1 = [LZStuManager sharedstuManager];
-    m1.name = @"comst";
-    
-    LZStuManager *m2 = [LZStuManager sharedstuManager];
-    
+       
     
     // This is an example of a functional test case.
     XCTAssert(YES, @"Pass");

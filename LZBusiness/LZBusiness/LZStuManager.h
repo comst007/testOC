@@ -6,9 +6,10 @@
 //  Copyright (c) 2015年 com.comst1314. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
-#import "LZStudent.h"
-#import "LZStuPersistence.h"
+#import "LZPersistance/LZPersistance.h"
+
 @interface LZStuManager : NSObject
 @property (nonatomic, copy) NSString *name;
 + (instancetype)sharedstuManager;
