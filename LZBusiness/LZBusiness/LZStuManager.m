@@ -41,7 +41,7 @@ static LZStuManager *instance = nil;
 
 - (void)updateStudent:(LZStudent *)student phone:(NSString *)phone{
     
-    [self updateStudent:student phone:phone];
+    [self.stuPersistence updateStudent:student phone:phone];
     
 }
 
