@@ -28,8 +28,15 @@
 
 
 - (NSArray *)findAll{
-    
+   
      self.listOfStudents = [NSKeyedUnarchiver unarchiveObjectWithFile:[self path]];
+    if ([self.listOfStudents count] == 0) {
+        self.listOfStudents = [NSMutableArray array];
+        LZStudent *stu = [[LZStudent alloc] init];
+        stu.name = @"comst";
+        stu.phone = @"18899763793";
+        [self.listOfStudents addObject:stu];
+    }
     
     return self.listOfStudents;
     

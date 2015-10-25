@@ -87,14 +87,17 @@ static LZStuManager *instance = nil;
 }
 
 - (instancetype)autorelease{
+    
     return instance;
 }
 
 - (instancetype)retain{
+    
     return instance;
 }
 
 - (NSUInteger)retainCount{
+    
     return 1;
 }
 
