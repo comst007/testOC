@@ -22,4 +22,5 @@
 - (NSArray *)searchByName:(NSString *)name;
 
 - (void)updateStudent:(LZStudent *)student phone:(NSString *)phone;
+
 @end

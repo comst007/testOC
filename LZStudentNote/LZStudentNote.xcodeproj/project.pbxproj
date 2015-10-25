@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CB0CF8AD1BDD3B0300F9D5A7 /* LZBusiness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0CF8AC1BDD3B0300F9D5A7 /* LZBusiness.framework */; };
 		CB0CF8AF1BDD3B8500F9D5A7 /* LZPersistance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0CF8AE1BDD3B8500F9D5A7 /* LZPersistance.framework */; };
+		CB0CF8CA1BDD501000F9D5A7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0CF8C91BDD501000F9D5A7 /* libsqlite3.dylib */; };
 		CB7162841BDBEE3B000385CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7162831BDBEE3B000385CF /* main.m */; };
 		CB7162871BDBEE3B000385CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7162861BDBEE3B000385CF /* AppDelegate.m */; };
 		CB71628A1BDBEE3B000385CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7162891BDBEE3B000385CF /* ViewController.m */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		CB0CF8AC1BDD3B0300F9D5A7 /* LZBusiness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LZBusiness.framework; path = "../../../Library/Developer/Xcode/DerivedData/LZTestNotes-cxxibtgzvjzcmjcbqkeolhwtettf/Build/Products/Debug-iphoneos/LZBusiness.framework"; sourceTree = "<group>"; };
 		CB0CF8AE1BDD3B8500F9D5A7 /* LZPersistance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LZPersistance.framework; path = "../../../Library/Developer/Xcode/DerivedData/LZTestNotes-cxxibtgzvjzcmjcbqkeolhwtettf/Build/Products/Debug-iphoneos/LZPersistance.framework"; sourceTree = "<group>"; };
+		CB0CF8C91BDD501000F9D5A7 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CB71627E1BDBEE3B000385CF /* LZStudentNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZStudentNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7162821BDBEE3B000385CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB7162831BDBEE3B000385CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0CF8CA1BDD501000F9D5A7 /* libsqlite3.dylib in Frameworks */,
 				CB0CF8AF1BDD3B8500F9D5A7 /* LZPersistance.framework in Frameworks */,
 				CB0CF8AD1BDD3B0300F9D5A7 /* LZBusiness.framework in Frameworks */,
 			);
@@ -69,6 +72,7 @@
 		CB7162751BDBEE3B000385CF = {
 			isa = PBXGroup;
 			children = (
+				CB0CF8C91BDD501000F9D5A7 /* libsqlite3.dylib */,
 				CB0CF8AE1BDD3B8500F9D5A7 /* LZPersistance.framework */,
 				CB0CF8AC1BDD3B0300F9D5A7 /* LZBusiness.framework */,
 				CB7162801BDBEE3B000385CF /* LZStudentNote */,

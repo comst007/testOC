@@ -11,6 +11,18 @@
 		CB0CF8A11BDD385B00F9D5A7 /* LZStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0CF8A01BDD385B00F9D5A7 /* LZStudent.m */; };
 		CB0CF8A31BDD38B900F9D5A7 /* LZStuPersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0CF8A21BDD38B900F9D5A7 /* LZStuPersistence.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB0CF8A51BDD38BE00F9D5A7 /* LZStuPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0CF8A41BDD38BE00F9D5A7 /* LZStuPersistence.m */; };
+		CB0CF8BC1BDD424700F9D5A7 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0CF8B11BDD424700F9D5A7 /* FMDatabase.h */; };
+		CB0CF8BD1BDD424700F9D5A7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0CF8B21BDD424700F9D5A7 /* FMDatabase.m */; };
+		CB0CF8BE1BDD424700F9D5A7 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0CF8B31BDD424700F9D5A7 /* FMDatabaseAdditions.h */; };
+		CB0CF8BF1BDD424700F9D5A7 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0CF8B41BDD424700F9D5A7 /* FMDatabaseAdditions.m */; };
+		CB0CF8C01BDD424700F9D5A7 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0CF8B51BDD424700F9D5A7 /* FMDatabasePool.h */; };
+		CB0CF8C11BDD424700F9D5A7 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0CF8B61BDD424700F9D5A7 /* FMDatabasePool.m */; };
+		CB0CF8C21BDD424700F9D5A7 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0CF8B71BDD424700F9D5A7 /* FMDatabaseQueue.h */; };
+		CB0CF8C31BDD424700F9D5A7 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0CF8B81BDD424700F9D5A7 /* FMDatabaseQueue.m */; };
+		CB0CF8C41BDD424700F9D5A7 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0CF8B91BDD424700F9D5A7 /* FMDB.h */; };
+		CB0CF8C51BDD424700F9D5A7 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0CF8BA1BDD424700F9D5A7 /* FMResultSet.h */; };
+		CB0CF8C61BDD424700F9D5A7 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0CF8BB1BDD424700F9D5A7 /* FMResultSet.m */; };
+		CB0CF8C81BDD4FDE00F9D5A7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0CF8C71BDD4FDE00F9D5A7 /* libsqlite3.dylib */; };
 		CB7162DD1BDBEE7A000385CF /* LZPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = CB7162DC1BDBEE7A000385CF /* LZPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB7162E31BDBEE7A000385CF /* LZPersistance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7162D71BDBEE7A000385CF /* LZPersistance.framework */; };
 		CB7162EA1BDBEE7A000385CF /* LZPersistanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7162E91BDBEE7A000385CF /* LZPersistanceTests.m */; };
@@ -31,6 +43,18 @@
 		CB0CF8A01BDD385B00F9D5A7 /* LZStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStudent.m; sourceTree = "<group>"; };
 		CB0CF8A21BDD38B900F9D5A7 /* LZStuPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStuPersistence.h; sourceTree = "<group>"; };
 		CB0CF8A41BDD38BE00F9D5A7 /* LZStuPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStuPersistence.m; sourceTree = "<group>"; };
+		CB0CF8B11BDD424700F9D5A7 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		CB0CF8B21BDD424700F9D5A7 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		CB0CF8B31BDD424700F9D5A7 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		CB0CF8B41BDD424700F9D5A7 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		CB0CF8B51BDD424700F9D5A7 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		CB0CF8B61BDD424700F9D5A7 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		CB0CF8B71BDD424700F9D5A7 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		CB0CF8B81BDD424700F9D5A7 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		CB0CF8B91BDD424700F9D5A7 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		CB0CF8BA1BDD424700F9D5A7 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		CB0CF8BB1BDD424700F9D5A7 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		CB0CF8C71BDD4FDE00F9D5A7 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CB7162D71BDBEE7A000385CF /* LZPersistance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LZPersistance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7162DB1BDBEE7A000385CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB7162DC1BDBEE7A000385CF /* LZPersistance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZPersistance.h; sourceTree = "<group>"; };
@@ -44,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0CF8C81BDD4FDE00F9D5A7 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +83,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB0CF8B01BDD424700F9D5A7 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				CB0CF8B11BDD424700F9D5A7 /* FMDatabase.h */,
+				CB0CF8B21BDD424700F9D5A7 /* FMDatabase.m */,
+				CB0CF8B31BDD424700F9D5A7 /* FMDatabaseAdditions.h */,
+				CB0CF8B41BDD424700F9D5A7 /* FMDatabaseAdditions.m */,
+				CB0CF8B51BDD424700F9D5A7 /* FMDatabasePool.h */,
+				CB0CF8B61BDD424700F9D5A7 /* FMDatabasePool.m */,
+				CB0CF8B71BDD424700F9D5A7 /* FMDatabaseQueue.h */,
+				CB0CF8B81BDD424700F9D5A7 /* FMDatabaseQueue.m */,
+				CB0CF8B91BDD424700F9D5A7 /* FMDB.h */,
+				CB0CF8BA1BDD424700F9D5A7 /* FMResultSet.h */,
+				CB0CF8BB1BDD424700F9D5A7 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
 		CB7162CD1BDBEE7A000385CF = {
 			isa = PBXGroup;
 			children = (
+				CB0CF8C71BDD4FDE00F9D5A7 /* libsqlite3.dylib */,
 				CB7162D91BDBEE7A000385CF /* LZPersistance */,
 				CB7162E61BDBEE7A000385CF /* LZPersistanceTests */,
 				CB7162D81BDBEE7A000385CF /* Products */,
@@ -79,6 +123,7 @@
 		CB7162D91BDBEE7A000385CF /* LZPersistance */ = {
 			isa = PBXGroup;
 			children = (
+				CB0CF8B01BDD424700F9D5A7 /* fmdb */,
 				CB0CF8A21BDD38B900F9D5A7 /* LZStuPersistence.h */,
 				CB0CF8A41BDD38BE00F9D5A7 /* LZStuPersistence.m */,
 				CB0CF89E1BDD385200F9D5A7 /* LZStudent.h */,
@@ -121,9 +166,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0CF8C51BDD424700F9D5A7 /* FMResultSet.h in Headers */,
+				CB0CF8C01BDD424700F9D5A7 /* FMDatabasePool.h in Headers */,
 				CB0CF89F1BDD385200F9D5A7 /* LZStudent.h in Headers */,
 				CB7162DD1BDBEE7A000385CF /* LZPersistance.h in Headers */,
+				CB0CF8BC1BDD424700F9D5A7 /* FMDatabase.h in Headers */,
 				CB0CF8A31BDD38B900F9D5A7 /* LZStuPersistence.h in Headers */,
+				CB0CF8C41BDD424700F9D5A7 /* FMDB.h in Headers */,
+				CB0CF8BE1BDD424700F9D5A7 /* FMDatabaseAdditions.h in Headers */,
+				CB0CF8C21BDD424700F9D5A7 /* FMDatabaseQueue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0CF8BD1BDD424700F9D5A7 /* FMDatabase.m in Sources */,
 				CB0CF8A51BDD38BE00F9D5A7 /* LZStuPersistence.m in Sources */,
+				CB0CF8C61BDD424700F9D5A7 /* FMResultSet.m in Sources */,
+				CB0CF8C11BDD424700F9D5A7 /* FMDatabasePool.m in Sources */,
 				CB0CF8A11BDD385B00F9D5A7 /* LZStudent.m in Sources */,
+				CB0CF8BF1BDD424700F9D5A7 /* FMDatabaseAdditions.m in Sources */,
+				CB0CF8C31BDD424700F9D5A7 /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
