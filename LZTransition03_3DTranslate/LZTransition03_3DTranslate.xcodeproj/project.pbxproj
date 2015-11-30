@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBB028901C0C643400FFC377 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB0288F1C0C643400FFC377 /* main.m */; };
+		CBB028931C0C643400FFC377 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028921C0C643400FFC377 /* AppDelegate.m */; };
+		CBB028961C0C643400FFC377 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028951C0C643400FFC377 /* ViewController.m */; };
+		CBB028991C0C643400FFC377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB028971C0C643400FFC377 /* Main.storyboard */; };
+		CBB0289B1C0C643400FFC377 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB0289A1C0C643400FFC377 /* Images.xcassets */; };
+		CBB0289E1C0C643400FFC377 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB0289C1C0C643400FFC377 /* LaunchScreen.xib */; };
+		CBB028AA1C0C643400FFC377 /* LZTransition03_3DTranslateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028A91C0C643400FFC377 /* LZTransition03_3DTranslateTests.m */; };
+		CBB028B51C0C651400FFC377 /* LZFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028B41C0C651400FFC377 /* LZFirstViewController.m */; };
+		CBB028B81C0C653300FFC377 /* LZSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028B71C0C653300FFC377 /* LZSecondViewController.m */; };
+		CBB028BB1C0C65FB00FFC377 /* LZPushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028BA1C0C65FB00FFC377 /* LZPushTransition.m */; };
+		CBB028BE1C0C92DC00FFC377 /* LZPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028BD1C0C92DC00FFC377 /* LZPopTransition.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBB028A41C0C643400FFC377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBB028821C0C643400FFC377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBB028891C0C643400FFC377;
+			remoteInfo = LZTransition03_3DTranslate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CBB0288A1C0C643400FFC377 /* LZTransition03_3DTranslate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZTransition03_3DTranslate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB0288E1C0C643400FFC377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBB0288F1C0C643400FFC377 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CBB028911C0C643400FFC377 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CBB028921C0C643400FFC377 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CBB028941C0C643400FFC377 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CBB028951C0C643400FFC377 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CBB028981C0C643400FFC377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBB0289A1C0C643400FFC377 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CBB0289D1C0C643400FFC377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CBB028A31C0C643400FFC377 /* LZTransition03_3DTranslateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZTransition03_3DTranslateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB028A81C0C643400FFC377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBB028A91C0C643400FFC377 /* LZTransition03_3DTranslateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZTransition03_3DTranslateTests.m; sourceTree = "<group>"; };
+		CBB028B31C0C651400FFC377 /* LZFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFirstViewController.h; sourceTree = "<group>"; };
+		CBB028B41C0C651400FFC377 /* LZFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFirstViewController.m; sourceTree = "<group>"; };
+		CBB028B61C0C653300FFC377 /* LZSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSecondViewController.h; sourceTree = "<group>"; };
+		CBB028B71C0C653300FFC377 /* LZSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSecondViewController.m; sourceTree = "<group>"; };
+		CBB028B91C0C65FB00FFC377 /* LZPushTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPushTransition.h; sourceTree = "<group>"; };
+		CBB028BA1C0C65FB00FFC377 /* LZPushTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPushTransition.m; sourceTree = "<group>"; };
+		CBB028BC1C0C92DC00FFC377 /* LZPopTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPopTransition.h; sourceTree = "<group>"; };
+		CBB028BD1C0C92DC00FFC377 /* LZPopTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPopTransition.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBB028871C0C643400FFC377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBB028A01C0C643400FFC377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBB028811C0C643400FFC377 = {
+			isa = PBXGroup;
+			children = (
+				CBB0288C1C0C643400FFC377 /* LZTransition03_3DTranslate */,
+				CBB028A61C0C643400FFC377 /* LZTransition03_3DTranslateTests */,
+				CBB0288B1C0C643400FFC377 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBB0288B1C0C643400FFC377 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBB0288A1C0C643400FFC377 /* LZTransition03_3DTranslate.app */,
+				CBB028A31C0C643400FFC377 /* LZTransition03_3DTranslateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBB0288C1C0C643400FFC377 /* LZTransition03_3DTranslate */ = {
+			isa = PBXGroup;
+			children = (
+				CBB028911C0C643400FFC377 /* AppDelegate.h */,
+				CBB028921C0C643400FFC377 /* AppDelegate.m */,
+				CBB028941C0C643400FFC377 /* ViewController.h */,
+				CBB028951C0C643400FFC377 /* ViewController.m */,
+				CBB028971C0C643400FFC377 /* Main.storyboard */,
+				CBB0289A1C0C643400FFC377 /* Images.xcassets */,
+				CBB0289C1C0C643400FFC377 /* LaunchScreen.xib */,
+				CBB0288D1C0C643400FFC377 /* Supporting Files */,
+				CBB028B31C0C651400FFC377 /* LZFirstViewController.h */,
+				CBB028B41C0C651400FFC377 /* LZFirstViewController.m */,
+				CBB028B61C0C653300FFC377 /* LZSecondViewController.h */,
+				CBB028B71C0C653300FFC377 /* LZSecondViewController.m */,
+				CBB028B91C0C65FB00FFC377 /* LZPushTransition.h */,
+				CBB028BA1C0C65FB00FFC377 /* LZPushTransition.m */,
+				CBB028BC1C0C92DC00FFC377 /* LZPopTransition.h */,
+				CBB028BD1C0C92DC00FFC377 /* LZPopTransition.m */,
+			);
+			path = LZTransition03_3DTranslate;
+			sourceTree = "<group>";
+		};
+		CBB0288D1C0C643400FFC377 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBB0288E1C0C643400FFC377 /* Info.plist */,
+				CBB0288F1C0C643400FFC377 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBB028A61C0C643400FFC377 /* LZTransition03_3DTranslateTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBB028A91C0C643400FFC377 /* LZTransition03_3DTranslateTests.m */,
+				CBB028A71C0C643400FFC377 /* Supporting Files */,
+			);
+			path = LZTransition03_3DTranslateTests;
+			sourceTree = "<group>";
+		};
+		CBB028A71C0C643400FFC377 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBB028A81C0C643400FFC377 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBB028891C0C643400FFC377 /* LZTransition03_3DTranslate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBB028AD1C0C643400FFC377 /* Build configuration list for PBXNativeTarget "LZTransition03_3DTranslate" */;
+			buildPhases = (
+				CBB028861C0C643400FFC377 /* Sources */,
+				CBB028871C0C643400FFC377 /* Frameworks */,
+				CBB028881C0C643400FFC377 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LZTransition03_3DTranslate;
+			productName = LZTransition03_3DTranslate;
+			productReference = CBB0288A1C0C643400FFC377 /* LZTransition03_3DTranslate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBB028A21C0C643400FFC377 /* LZTransition03_3DTranslateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBB028B01C0C643400FFC377 /* Build configuration list for PBXNativeTarget "LZTransition03_3DTranslateTests" */;
+			buildPhases = (
+				CBB0289F1C0C643400FFC377 /* Sources */,
+				CBB028A01C0C643400FFC377 /* Frameworks */,
+				CBB028A11C0C643400FFC377 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBB028A51C0C643400FFC377 /* PBXTargetDependency */,
+			);
+			name = LZTransition03_3DTranslateTests;
+			productName = LZTransition03_3DTranslateTests;
+			productReference = CBB028A31C0C643400FFC377 /* LZTransition03_3DTranslateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBB028821C0C643400FFC377 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = com.comst1314;
+				TargetAttributes = {
+					CBB028891C0C643400FFC377 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					CBB028A21C0C643400FFC377 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = CBB028891C0C643400FFC377;
+					};
+				};
+			};
+			buildConfigurationList = CBB028851C0C643400FFC377 /* Build configuration list for PBXProject "LZTransition03_3DTranslate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBB028811C0C643400FFC377;
+			productRefGroup = CBB0288B1C0C643400FFC377 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBB028891C0C643400FFC377 /* LZTransition03_3DTranslate */,
+				CBB028A21C0C643400FFC377 /* LZTransition03_3DTranslateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBB028881C0C643400FFC377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBB028991C0C643400FFC377 /* Main.storyboard in Resources */,
+				CBB0289E1C0C643400FFC377 /* LaunchScreen.xib in Resources */,
+				CBB0289B1C0C643400FFC377 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBB028A11C0C643400FFC377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBB028861C0C643400FFC377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBB028BE1C0C92DC00FFC377 /* LZPopTransition.m in Sources */,
+				CBB028BB1C0C65FB00FFC377 /* LZPushTransition.m in Sources */,
+				CBB028961C0C643400FFC377 /* ViewController.m in Sources */,
+				CBB028931C0C643400FFC377 /* AppDelegate.m in Sources */,
+				CBB028901C0C643400FFC377 /* main.m in Sources */,
+				CBB028B81C0C653300FFC377 /* LZSecondViewController.m in Sources */,
+				CBB028B51C0C651400FFC377 /* LZFirstViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBB0289F1C0C643400FFC377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBB028AA1C0C643400FFC377 /* LZTransition03_3DTranslateTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBB028A51C0C643400FFC377 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBB028891C0C643400FFC377 /* LZTransition03_3DTranslate */;
+			targetProxy = CBB028A41C0C643400FFC377 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBB028971C0C643400FFC377 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBB028981C0C643400FFC377 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CBB0289C1C0C643400FFC377 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBB0289D1C0C643400FFC377 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBB028AB1C0C643400FFC377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CBB028AC1C0C643400FFC377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBB028AE1C0C643400FFC377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LZTransition03_3DTranslate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CBB028AF1C0C643400FFC377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LZTransition03_3DTranslate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CBB028B11C0C643400FFC377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LZTransition03_3DTranslateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZTransition03_3DTranslate.app/LZTransition03_3DTranslate";
+			};
+			name = Debug;
+		};
+		CBB028B21C0C643400FFC377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LZTransition03_3DTranslateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZTransition03_3DTranslate.app/LZTransition03_3DTranslate";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBB028851C0C643400FFC377 /* Build configuration list for PBXProject "LZTransition03_3DTranslate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBB028AB1C0C643400FFC377 /* Debug */,
+				CBB028AC1C0C643400FFC377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBB028AD1C0C643400FFC377 /* Build configuration list for PBXNativeTarget "LZTransition03_3DTranslate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBB028AE1C0C643400FFC377 /* Debug */,
+				CBB028AF1C0C643400FFC377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CBB028B01C0C643400FFC377 /* Build configuration list for PBXNativeTarget "LZTransition03_3DTranslateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBB028B11C0C643400FFC377 /* Debug */,
+				CBB028B21C0C643400FFC377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBB028821C0C643400FFC377 /* Project object */;
+}
