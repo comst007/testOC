@@ -14,6 +14,9 @@
 		CBB028D91C0CA45C00FFC377 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB028D81C0CA45C00FFC377 /* Images.xcassets */; };
 		CBB028DC1C0CA45C00FFC377 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB028DA1C0CA45C00FFC377 /* LaunchScreen.xib */; };
 		CBB028E81C0CA45C00FFC377 /* LZTransitionPro04_maskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028E71C0CA45C00FFC377 /* LZTransitionPro04_maskTests.m */; };
+		CBB028F31C0CA84B00FFC377 /* LZFirstVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028F21C0CA84B00FFC377 /* LZFirstVIewController.m */; };
+		CBB028F61C0CA87800FFC377 /* LZSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028F51C0CA87800FFC377 /* LZSecondViewController.m */; };
+		CBB028F91C0CABA900FFC377 /* LZPushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028F81C0CABA900FFC377 /* LZPushTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		CBB028E11C0CA45C00FFC377 /* LZTransitionPro04_maskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZTransitionPro04_maskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB028E61C0CA45C00FFC377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB028E71C0CA45C00FFC377 /* LZTransitionPro04_maskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZTransitionPro04_maskTests.m; sourceTree = "<group>"; };
+		CBB028F11C0CA84B00FFC377 /* LZFirstVIewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFirstVIewController.h; sourceTree = "<group>"; };
+		CBB028F21C0CA84B00FFC377 /* LZFirstVIewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFirstVIewController.m; sourceTree = "<group>"; };
+		CBB028F41C0CA87800FFC377 /* LZSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSecondViewController.h; sourceTree = "<group>"; };
+		CBB028F51C0CA87800FFC377 /* LZSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSecondViewController.m; sourceTree = "<group>"; };
+		CBB028F71C0CABA900FFC377 /* LZPushTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPushTransition.h; sourceTree = "<group>"; };
+		CBB028F81C0CABA900FFC377 /* LZPushTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPushTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +98,10 @@
 				CBB028D81C0CA45C00FFC377 /* Images.xcassets */,
 				CBB028DA1C0CA45C00FFC377 /* LaunchScreen.xib */,
 				CBB028CB1C0CA45C00FFC377 /* Supporting Files */,
+				CBB028F11C0CA84B00FFC377 /* LZFirstVIewController.h */,
+				CBB028F21C0CA84B00FFC377 /* LZFirstVIewController.m */,
+				CBB028F41C0CA87800FFC377 /* LZSecondViewController.h */,
+				CBB028F51C0CA87800FFC377 /* LZSecondViewController.m */,
 			);
 			path = LZTransitionPro04_mask;
 			sourceTree = "<group>";
@@ -98,6 +111,8 @@
 			children = (
 				CBB028CC1C0CA45C00FFC377 /* Info.plist */,
 				CBB028CD1C0CA45C00FFC377 /* main.m */,
+				CBB028F71C0CABA900FFC377 /* LZPushTransition.h */,
+				CBB028F81C0CABA900FFC377 /* LZPushTransition.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -219,9 +234,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB028F91C0CABA900FFC377 /* LZPushTransition.m in Sources */,
 				CBB028D41C0CA45C00FFC377 /* ViewController.m in Sources */,
 				CBB028D11C0CA45C00FFC377 /* AppDelegate.m in Sources */,
 				CBB028CE1C0CA45C00FFC377 /* main.m in Sources */,
+				CBB028F61C0CA87800FFC377 /* LZSecondViewController.m in Sources */,
+				CBB028F31C0CA84B00FFC377 /* LZFirstVIewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
