@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="StN-Yv-SUu">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--First View Contrller-->
+        <scene sceneID="ghZ-y0-kMB">
+            <objects>
+                <viewController id="StN-Yv-SUu" customClass="LZFirstViewContrller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BU4-Qf-zFz"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZTu-B8-AU3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UF4-BV-Tw0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page1" translatesAutoresizingMaskIntoConstraints="NO" id="j4Y-eZ-SRU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiP-Jf-KMk">
+                                <rect key="frame" x="309" y="15" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KJd-iG-kEZ"/>
+                                    <constraint firstAttribute="width" constant="50" id="WD4-tf-Zb3"/>
+                                </constraints>
+                                <state key="normal" title=" ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="presentButtonClick:" destination="StN-Yv-SUu" eventType="touchUpInside" id="MMt-di-L2R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OiP-Jf-KMk" firstAttribute="top" secondItem="UF4-BV-Tw0" secondAttribute="top" constant="15" id="0jz-v7-F4i"/>
+                            <constraint firstItem="ZTu-B8-AU3" firstAttribute="top" secondItem="j4Y-eZ-SRU" secondAttribute="bottom" id="TMk-iR-kjb"/>
+                            <constraint firstItem="j4Y-eZ-SRU" firstAttribute="leading" secondItem="UF4-BV-Tw0" secondAttribute="leading" id="ZjY-6w-znw"/>
+                            <constraint firstAttribute="trailing" secondItem="j4Y-eZ-SRU" secondAttribute="trailing" id="iph-m9-Ypv"/>
+                            <constraint firstItem="j4Y-eZ-SRU" firstAttribute="top" secondItem="UF4-BV-Tw0" secondAttribute="top" id="oWm-e1-0B0"/>
+                            <constraint firstAttribute="trailing" secondItem="OiP-Jf-KMk" secondAttribute="trailing" constant="16" id="sMt-be-PGA"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="presentButton" destination="OiP-Jf-KMk" id="ZX0-6f-Do3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DE1-5s-sDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-473.5" y="1.5"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="nX2-zg-9Cn">
+            <objects>
+                <viewController storyboardIdentifier="LZSecondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="olk-7L-WPI" customClass="LZSecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uId-ec-Pfn"/>
+                        <viewControllerLayoutGuide type="bottom" id="UIT-VA-ViA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gyb-JB-NDx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page2" translatesAutoresizingMaskIntoConstraints="NO" id="99j-yD-BOw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBL-1E-YmN">
+                                <rect key="frame" x="16" y="13" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HNL-1R-e6E"/>
+                                    <constraint firstAttribute="width" constant="50" id="JG8-1C-NcU"/>
+                                </constraints>
+                                <state key="normal" title=" ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButtonClick:" destination="olk-7L-WPI" eventType="touchUpInside" id="RBR-RG-vgj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LBL-1E-YmN" firstAttribute="top" secondItem="Gyb-JB-NDx" secondAttribute="top" constant="13" id="AfR-uo-WBV"/>
+                            <constraint firstItem="LBL-1E-YmN" firstAttribute="leading" secondItem="Gyb-JB-NDx" secondAttribute="leading" constant="16" id="DJs-0K-dTW"/>
+                            <constraint firstItem="99j-yD-BOw" firstAttribute="top" secondItem="Gyb-JB-NDx" secondAttribute="top" id="QMc-ka-eKl"/>
+                            <constraint firstItem="99j-yD-BOw" firstAttribute="leading" secondItem="Gyb-JB-NDx" secondAttribute="leading" id="TLh-3w-Wfw"/>
+                            <constraint firstAttribute="trailing" secondItem="99j-yD-BOw" secondAttribute="trailing" id="fp1-dc-7nN"/>
+                            <constraint firstItem="UIT-VA-ViA" firstAttribute="top" secondItem="99j-yD-BOw" secondAttribute="bottom" id="gcY-Ns-73O"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="dismissButton" destination="LBL-1E-YmN" id="uAb-U4-DlB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyn-9Y-CWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="171.5" y="1.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="page1" width="320" height="568"/>
+        <image name="page2" width="320" height="568"/>
+    </resources>
+</document>
