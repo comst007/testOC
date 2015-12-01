@@ -9,6 +9,7 @@
 #import "LZFirstVIewController.h"
 #import "LZSecondViewController.h"
 #import "LZPushTransition.h"
+#import "LZPopTransition.h"
 @interface LZFirstVIewController ()<UINavigationControllerDelegate>
 
 @end
@@ -27,6 +28,9 @@
     
     if ([toVC isKindOfClass:[LZSecondViewController class]]) {
         return [[LZPushTransition alloc] init];
+    }
+    if ([toVC isKindOfClass:[LZFirstVIewController class]]) {
+        return [[LZPopTransition alloc] init];
     }
     return nil;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB1050CF1C0D7482003A516E /* LZPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1050CE1C0D7482003A516E /* LZPopTransition.m */; };
 		CBB028CE1C0CA45C00FFC377 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028CD1C0CA45C00FFC377 /* main.m */; };
 		CBB028D11C0CA45C00FFC377 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028D01C0CA45C00FFC377 /* AppDelegate.m */; };
 		CBB028D41C0CA45C00FFC377 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB028D31C0CA45C00FFC377 /* ViewController.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB1050CD1C0D7482003A516E /* LZPopTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPopTransition.h; sourceTree = "<group>"; };
+		CB1050CE1C0D7482003A516E /* LZPopTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPopTransition.m; sourceTree = "<group>"; };
 		CBB028C81C0CA45C00FFC377 /* LZTransitionPro04_mask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZTransitionPro04_mask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB028CC1C0CA45C00FFC377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB028CD1C0CA45C00FFC377 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				CBB028CD1C0CA45C00FFC377 /* main.m */,
 				CBB028F71C0CABA900FFC377 /* LZPushTransition.h */,
 				CBB028F81C0CABA900FFC377 /* LZPushTransition.m */,
+				CB1050CD1C0D7482003A516E /* LZPopTransition.h */,
+				CB1050CE1C0D7482003A516E /* LZPopTransition.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB1050CF1C0D7482003A516E /* LZPopTransition.m in Sources */,
 				CBB028F91C0CABA900FFC377 /* LZPushTransition.m in Sources */,
 				CBB028D41C0CA45C00FFC377 /* ViewController.m in Sources */,
 				CBB028D11C0CA45C00FFC377 /* AppDelegate.m in Sources */,
@@ -434,6 +440,7 @@
 				CBB028ED1C0CA45C00FFC377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBB028EE1C0CA45C00FFC377 /* Build configuration list for PBXNativeTarget "LZTransitionPro04_maskTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +449,7 @@
 				CBB028F01C0CA45C00FFC377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
