@@ -12,17 +12,30 @@
 #import "LZPopTransition.h"
 @interface LZFirstVIewController ()<UINavigationControllerDelegate>
 
+@property (nonatomic, strong) UIPercentDrivenInteractiveTransition *interativeTransition;
+
 @end
 @implementation LZFirstVIewController
 
+- (void)viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
+    self.navigationController.delegate = self;
+}
 - (void)viewDidLoad{
     
     [super viewDidLoad];
-    self.navigationController.delegate = self;
+   
+    
+    self.interativeTransition = [[UIPercentDrivenInteractiveTransition alloc] init];
+
+    
     self.pushButton.layer.cornerRadius = self.pushButton.bounds.size.width * 0.5;
     
     self.pushButton.layer.masksToBounds = YES;
 }
+
+
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
     
@@ -31,6 +44,14 @@
     }
     if ([toVC isKindOfClass:[LZFirstVIewController class]]) {
         return [[LZPopTransition alloc] init];
+    }
+    return nil;
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
+    if ([animationController isKindOfClass:[LZPopTransition class]]) {
+        
+        return self.interativeTransition;
     }
     return nil;
 }

@@ -57,10 +57,14 @@
     [maskLayer addAnimation:animation forKey:@"maskAnimation"];
     
 }
+
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     
     LZSecondViewController *fromVC = (LZSecondViewController *)[self.context viewControllerForKey:UITransitionContextFromViewControllerKey];
+    LZFirstVIewController *toVC = (LZFirstVIewController *)[self.context viewControllerForKey:UITransitionContextFromViewControllerKey];
+
     fromVC.view.layer.mask = nil;
+    toVC.view.layer.mask = nil;
     
     [self.context completeTransition:![self.context transitionWasCancelled]];
 }

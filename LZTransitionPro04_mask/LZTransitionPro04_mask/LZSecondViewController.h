@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface LZSecondViewController : UIViewController
+
+@property (nonatomic, strong) UIPercentDrivenInteractiveTransition *interactiveTransition;
 @property (weak, nonatomic) IBOutlet UIButton *popButton;
 - (IBAction)popButtonClick:(UIButton *)sender;
 

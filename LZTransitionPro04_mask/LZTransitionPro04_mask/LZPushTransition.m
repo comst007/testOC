@@ -30,7 +30,7 @@
     
     UIView *fromView = fromVC.view;
     UIView *toView = toVC.view;
-    
+    toView.frame = [transitionContext finalFrameForViewController:toVC];
     [containerView addSubview:toView];
     
     UIBezierPath *startPath = [UIBezierPath bezierPathWithOvalInRect:fromVC.pushButton.frame];
@@ -51,6 +51,7 @@
     maskAnimation.duration = [self transitionDuration:transitionContext];
     maskAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     maskAnimation.delegate = self;
+    shapeLayer.path = finalPath.CGPath;
     [shapeLayer addAnimation:maskAnimation forKey:@"maskAnimation"];
     
     
@@ -59,6 +60,8 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     [self.context completeTransition:YES];
      LZSecondViewController *toVC = (LZSecondViewController *)[self.context viewControllerForKey:UITransitionContextToViewControllerKey];
+    LZFirstVIewController *fromVC = (LZFirstVIewController *)[self.context viewControllerForKey:UITransitionContextFromViewControllerKey];
+    fromVC.view.layer.mask = nil;
     toVC.view.layer.mask = nil;
     
 }
